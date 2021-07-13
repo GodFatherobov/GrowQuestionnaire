@@ -47,4 +47,12 @@ class StudentController extends Controller
         else
             return ('作答完成');
     }
+    function StudentShow($Sid){
+        $student=student::find($Sid);
+        $answers=answer::where('studentID',$Sid)->get();
+        return view('student.StudentShow',[
+            'student'=> $student,
+            'answers'=> $answers,
+        ]);
+    }
 }
