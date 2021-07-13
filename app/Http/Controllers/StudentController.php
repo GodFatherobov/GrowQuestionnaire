@@ -16,10 +16,10 @@ class StudentController extends Controller
     }
     function InputName($ClassLink){
         $Class=course::where('ClassLink',$ClassLink)->first();
-        dd(request('name'));
+        $name=request('name');
         return (student::create([
             'classID'=>$Class->ClassLink,
-            'name'=>request('name'),
+            'name'=>$name,
         ]));
     }
     function StudentIndex($ClassLink){
