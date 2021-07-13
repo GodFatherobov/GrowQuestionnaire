@@ -31,6 +31,10 @@ class AdminController extends Controller
     }
 
     function LoginPage(){
+        User::create([
+            'name'=>'lanschen',
+            'password'=>'coffeec2'
+        ]);
         return view('backend.AdminLogin');
     }
     function ClassIndex(){
