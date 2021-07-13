@@ -34,14 +34,14 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
-        if($Qid<12){
-        $Student=student::find($Sid);
         answer::create([
             'studentID'=>$Sid,
             'questionID'=>$Qid,
             'answer'=>request('answer'),
         ]);
         $Qid++;
+        if($Qid<=12){
+        $Student=student::find($Sid);
         return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>$Qid]);
         }
         else
