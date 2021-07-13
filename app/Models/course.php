@@ -9,6 +9,7 @@ class course extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'ClassName'
+        'ClassName',
+        'ClassLink',
     ];
 }
