@@ -32,7 +32,7 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
-        if($Qid>=12){
+        if($Qid<=12){
         $Student=student::find($Sid);
         answer::create([
             'studentID'=>$Sid,
