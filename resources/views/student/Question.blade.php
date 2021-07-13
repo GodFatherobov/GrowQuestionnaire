@@ -8,9 +8,10 @@
 <h1>你會如何回應 ?</h1>
 <h3>{{$question->id}}. 情境</h3>
     <h3>{{$question->Question}}</h3>
-    <form action="" enctype="multipart/form-data" method="post">
+    <form action="/StoreAnswer/{Sid}/{Qid}" enctype="multipart/form-data" method="post">
 <div>
     <h3>行動選項 – 你可能會 ...</h3>
+    <div class="row">
     <input type="radio" name="answer" id="A" value="A" />
     <label for="A">(A){{$question->Option1}}  </label>
 </div>
@@ -29,7 +30,7 @@
     <input type="radio" name="answer" id="D" value="D" />
     <label for="D">D) {{$question->Option4}} </label>
 </div>
-        <div class="row">
+
             <button class="btn">下一頁</button>
         </div>
 </form>
