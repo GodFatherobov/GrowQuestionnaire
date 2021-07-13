@@ -27,5 +27,6 @@ Route::post('/AdminLogin', [App\Http\Controllers\AdminController::class, 'login'
 Route::get('/ClassIndex', [App\Http\Controllers\AdminController::class, 'ClassIndex'])->name('backend.ClassIndex');
 Route::post('/ClassCreate', [App\Http\Controllers\AdminController::class, 'ClassCreate'])->name('backend.ClassCreate');
 Route::get('/Class/{id}', [App\Http\Controllers\AdminController::class, 'ClassShow'])->name('backend.ClassShow');
+Route::get('/{ClassLink}/Quiz/{qid}', [App\Http\Controllers\StudentController::class, 'Quiz'])->name('student.Question');
 
 Route::get('/test', [App\Http\Controllers\AdminController::class, 'test'])->name('test');
