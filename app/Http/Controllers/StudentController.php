@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\answer;
 use App\Models\course;
 use App\Models\question;
 use App\Models\student;
@@ -29,5 +30,19 @@ class StudentController extends Controller
         return view('student.Question',[
             'question'=>$question,
         ]);
+    }
+    function StoreAnswer($Sid,$Qid){
+        if($Qid>=12){
+        $Student=student::find($Sid);
+        answer::create([
+            'studentID'=>$Sid,
+            'questionID'=>$Qid,
+            'answer'=>request('answer'),
+        ]);
+        $Qid++;
+        return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>$Qid]);
+        }
+        else
+            return ('作答完成');
     }
 }
