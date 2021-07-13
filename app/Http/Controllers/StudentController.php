@@ -21,8 +21,6 @@ class StudentController extends Controller
             'classID'=>$Class->id,
             'name'=>$Name,
         ]);
-        $Sid=$Student->id;
-
-        return redirect('student.Question',['Sid' => 1,'Qid'=>1]);
+        return redirect('student.Question',['Sid' => $Student->id,'Qid'=>1]);
     }
 }
