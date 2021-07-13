@@ -10,21 +10,20 @@
 <form action="" enctype="multipart/form-data" method="post">
     @csrf
     <div class="row">
-                <label for="name" class="col-md-4 col-form-label">您的姓名</label>
+        <label for="Name" class="col-md-4 col-form-label">您的姓名：</label>
+        <input id="Name"
+               type="text"
+               class="form-control @error('Name') is-invalid @enderror"
+               name="Name"
+               value="{{ old('Name') }}"
+               required autocomplete="Name" autofocus>
 
-                <input id="name"
-                       type="text"
-                       class="form-control @error('name') is-invalid @enderror"
-                       name="name"
-                       value="{{ old('name') }}"
-                       required autocomplete="name" autofocus>
-
-                @error('name')
-                <span class="invalid-feedback" role="alert">
+        @error('Name')
+        <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                @enderror
-            </div>
+        @enderror
+    </div>
     <h1>目的</h1>
     <p>此評量工具用於評估你嘗試影響他人的行為和態度時，所使用的領導行為。<br>
         透過「LEAD Self 自我評估」所收集的資訊，可以深入了解你目前的優勢，以及領導力技巧發展的領域。它提供<br>
