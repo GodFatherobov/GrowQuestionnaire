@@ -9,6 +9,7 @@
 <h3>{{$question->id}}. 情境</h3>
     <h3>{{$question->Question}}</h3>
     <form action="/StoreAnswer/{Sid}/{Qid}" enctype="multipart/form-data" method="post">
+        @csrf
 <div>
     <h3>行動選項 – 你可能會 ...</h3>
     <div class="row">
