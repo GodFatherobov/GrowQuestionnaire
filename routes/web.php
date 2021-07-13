@@ -28,6 +28,6 @@ Route::get('/ClassIndex', [App\Http\Controllers\AdminController::class, 'ClassIn
 Route::post('/ClassCreate', [App\Http\Controllers\AdminController::class, 'ClassCreate'])->name('backend.ClassCreate');
 Route::get('/Class/{id}', [App\Http\Controllers\AdminController::class, 'ClassShow'])->name('backend.ClassShow');
 Route::get('/Quiz/{Sid}/{Qid}', [App\Http\Controllers\StudentController::class, 'ShowQuestion'])->name('student.Question');
-Route::get('/Quiz/{Sid}/{Qid}', [App\Http\Controllers\StudentController::class, 'StoreAnswer'])->name('student.StoreAnswer');
+//Route::get('/Quiz/{Sid}/{Qid}', [App\Http\Controllers\StudentController::class, 'StoreAnswer'])->name('student.StoreAnswer');
 
 Route::get('/test', [App\Http\Controllers\AdminController::class, 'test'])->name('test');
