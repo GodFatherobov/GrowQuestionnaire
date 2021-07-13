@@ -7,7 +7,7 @@
 
 <h1>Self問卷填寫說明</h1>
 
-<form action="/card" enctype="multipart/form-data" method="post">
+<form action="/{{$ClassLink}}/Quiz" enctype="multipart/form-data" method="post">
     @csrf
     <div class="row">
                 <label for="name" class="col-md-4 col-form-label">您的姓名</label>
