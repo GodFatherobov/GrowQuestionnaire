@@ -9,7 +9,7 @@
 
 @foreach($answers as $answer)
         <tr>
-            <td align="center"><span style="font-size:18px;">第{{$answers->questionID}}題</span></td>
+            <td align="center"><span style="font-size:18px;">第{{$answer->questionID}}題</span></td>
         </tr>
     <tr>
         <td align="center"><span style="font-size:18px;">{{$answer->answer}}</span></td>
