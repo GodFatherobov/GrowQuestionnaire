@@ -27,11 +27,15 @@
             </div>
         </form>
 
-<table border="1" width="200" align="center">
+<table border="1" width="500" align="center">
+    <tr>
+        <td align="center"><span style="font-size:18px;">課程名稱</span></td>
+        <td align="center"><span style="font-size:18px;">問卷網址</span></td>
+    </tr>
     @foreach($classes as $class)
         <tr>
-            <td align="center"><span style="font-size:20px;"><a href=" {{ route('backend.ClassShow', ['id' => $class->id]) }}">{{$class->ClassName}}</a></span></td>
-            <td align="center"><span style="font-size:20px;">http://growquestionnaire.herokuapp.com/,{{$class->ClassLink}}</span></td>
+            <td align="center"><span style="font-size:18px;"><a href=" {{ route('backend.ClassShow', ['id' => $class->id]) }}">{{$class->ClassName}}</a></span></td>
+            <td align="center"><span style="font-size:18px;">http://growquestionnaire.herokuapp.com/,{{$class->ClassLink}}</span></td>
         </tr>
     @endforeach
 </table>
