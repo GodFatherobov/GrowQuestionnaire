@@ -6,7 +6,7 @@
 <body>
 <div align="center">
 <h1>課程名稱：{{$class->ClassName}}</h1>
-    <h1>課程連結：</h1>
+    <h1>課程連結：{{$class->ClassLink}}</h1>
     <h1>學員清單</h1>
     <table border="1" width="200" align="center">
         @foreach($students as $student)
