@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use App\Models\question;
 use App\Models\student;
 use Illuminate\Http\Request;
 
@@ -22,5 +23,11 @@ class StudentController extends Controller
             'name'=>$Name,
         ]);
         return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>1]);
+    }
+    function ShowQuestion($Qid){
+        $question=question::find($Qid);
+        return view('student.Question',[
+            'question'=>$question,
+        ]);
     }
 }
