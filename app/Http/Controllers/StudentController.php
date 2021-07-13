@@ -21,6 +21,6 @@ class StudentController extends Controller
             'classID'=>$Class->id,
             'name'=>$Name,
         ]);
-        return redirect('student.Question',['Sid' => $Student->id,'Qid'=>1]);
+        return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>1]);
     }
 }
