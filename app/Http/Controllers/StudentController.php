@@ -17,11 +17,11 @@ class StudentController extends Controller
     function InputName($ClassLink){
         $Class=course::where('ClassLink',$ClassLink)->first();
         $name=request('name');
-        dd($name);
-        return (student::create([
+        student::create([
             'classID'=>$Class->ClassLink,
             'name'=>$name,
-        ]));
+        ]);
+        return view('student.Question');
     }
     function StudentIndex($ClassLink){
 
