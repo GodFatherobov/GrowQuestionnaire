@@ -6,9 +6,11 @@
 <body>
 
 <h1>你會如何回應 ?</h1>
+<h3>{{$Qid}}. 情境</h3>
     <h3>{{$question->Question}}</h3>
     <form action="" enctype="multipart/form-data" method="post">
 <div>
+    <h3>行動選項 – 你可能會 ...</h3>
     <input type="radio" name="answer" id="A" value="A" />
     <label for="A">(A){{$question->Option1}}  </label>
 </div>
