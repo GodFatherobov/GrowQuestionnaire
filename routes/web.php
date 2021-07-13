@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/SQuiz', [App\Http\Controllers\StudentController::class, 'Question'])->name('student.StudentQuiz');
+Route::get('/{ClassLink}/Quiz', [App\Http\Controllers\StudentController::class, 'Quiz'])->name('student.StudentQuiz');
 Route::get('/AdminLogin', [App\Http\Controllers\AdminController::class, 'LoginPage'])->name('backend.AdminLogin');
 Route::post('/AdminLogin', [App\Http\Controllers\AdminController::class, 'login'])->name('backend.AdminLogin');
 Route::get('/ClassIndex', [App\Http\Controllers\AdminController::class, 'ClassIndex'])->name('backend.ClassIndex');
