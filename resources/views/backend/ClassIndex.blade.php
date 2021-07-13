@@ -35,7 +35,7 @@
     @foreach($classes as $class)
         <tr>
             <td align="center"><span style="font-size:18px;"><a href=" {{ route('backend.ClassShow', ['id' => $class->id]) }}">{{$class->ClassName}}</a></span></td>
-            <td align="center"><span style="font-size:18px;">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</span></td>
+            <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</a></span></td>
         </tr>
     @endforeach
 </table>

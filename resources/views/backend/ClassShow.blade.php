@@ -6,8 +6,8 @@
 <body>
 <div align="center">
 <h1>課程名稱：{{$class->ClassName}}</h1>
-    <h1>課程連結：{{$class->ClassLink}}</h1>
-    <h1>學員清單</h1>
+    <p>課程連結：<a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</a></p>
+    <p>學員清單</p>
     <table border="1" width="200" align="center">
         @foreach($students as $student)
             <tr>
