@@ -24,7 +24,7 @@ class StudentController extends Controller
         ]);
         return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>1]);
     }
-    function ShowQuestion($Qid){
+    function ShowQuestion($Sid,$Qid){
         $question=question::find($Qid);
         return view('student.Question',[
             'question'=>$question,
