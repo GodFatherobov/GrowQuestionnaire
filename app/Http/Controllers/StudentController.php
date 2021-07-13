@@ -29,6 +29,8 @@ class StudentController extends Controller
         $question=question::find($Qid);
         return view('student.Question',[
             'question'=>$question,
+            'Qid'=>$Qid,
+            'Sid'=>$Sid,
         ]);
     }
     function StoreAnswer($Sid,$Qid){
