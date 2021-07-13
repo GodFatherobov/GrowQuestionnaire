@@ -4,28 +4,32 @@
     <title>Lead Self問卷填寫</title>
 </head>
 <body>
-<li>
+
 <h1>你會如何回應 ?</h1>
     <h3>{{$question->Question}}</h3>
+    <form action="" enctype="multipart/form-data" method="post">
 <div>
-    <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-    <label for="question-1-answers-A">A){{$question->Option1}}  </label>
+    <input type="radio" name="answer" id="A" value="A" />
+    <label for="A">(A){{$question->Option1}}  </label>
 </div>
 
 <div>
-    <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-    <label for="question-1-answers-B">B) {{$question->Option2}} </label>
+    <input type="radio" name="answer" id="B" value="B" />
+    <label for="B">(B) {{$question->Option2}} </label>
 </div>
 
 <div>
-    <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-    <label for="question-1-answers-C">C) {{$question->Option3}} </label>
+    <input type="radio" name="answer" id="C" value="C" />
+    <label for="C">(C) {{$question->Option3}} </label>
 </div>
 
 <div>
-    <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-    <label for="question-1-answers-D">D) {{$question->Option4}} </label>
+    <input type="radio" name="answer" id="D" value="D" />
+    <label for="D">D) {{$question->Option4}} </label>
 </div>
-<li>
+        <div class="row">
+            <button class="btn">下一頁</button>
+        </div>
+</form>
 </body>
 </html>
