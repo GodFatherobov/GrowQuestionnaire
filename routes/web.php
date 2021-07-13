@@ -28,3 +28,5 @@ Route::get('/ClassIndex', [App\Http\Controllers\AdminController::class, 'ClassIn
 Route::post('/ClassCreate', [App\Http\Controllers\AdminController::class, 'ClassCreate'])->name('backend.ClassCreate');
 Route::get('/Class/{id}', [App\Http\Controllers\AdminController::class, 'ClassShow'])->name('backend.ClassShow');
 Route::get('/StudentIndex', [App\Http\Controllers\StudentController::class, 'StudentIndex'])->name('Student.StudentIndex');
+
+Route::get('/test', [App\Http\Controllers\AdminController::class, 'test'])->name('test');
