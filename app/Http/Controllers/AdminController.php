@@ -46,7 +46,6 @@ class AdminController extends Controller
     }
     function ClassCreate(){
         $ClassLink=str_random(10);
-        dd($ClassLink);
         course::create([
             'ClassName'=>request('ClassName'),
             'ClassLink'=>$ClassLink,
