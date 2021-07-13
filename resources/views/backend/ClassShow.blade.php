@@ -10,11 +10,11 @@
     <p>學員清單</p>
     <table border="1" width="200" align="center">
         <tr>
-            <td align="center"><span style="font-size:20px;">學員姓名</span></td>
+            <td align="center"><span style="font-size:18px;">學員姓名</span></td>
         </tr>
         @foreach($students as $student)
             <tr>
-                <td align="center"><span style="font-size:20px;">{{$student->name}}</span></td>
+                <td align="center"><span style="font-size:18px;">{{$student->name}}</span></td>
             </tr>
         @endforeach
     </table>
