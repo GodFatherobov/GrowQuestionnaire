@@ -45,8 +45,10 @@ class AdminController extends Controller
         }
     }
     function ClassCreate(){
+        $ClassLink=str_random(10);
         course::create([
-            'ClassName'=>request('ClassName')
+            'ClassName'=>request('ClassName'),
+            'ClassLink'=>$ClassLink,
         ]);
         return Redirect::to('/ClassIndex');
     }
