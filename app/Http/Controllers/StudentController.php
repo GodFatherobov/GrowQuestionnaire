@@ -16,7 +16,7 @@ class StudentController extends Controller
     }
     function InputName($ClassLink){
         $Class=course::where('ClassLink',$ClassLink)->first();
-        $Name=request('name');
+        $Name=request('Name');
         student::create([
             'classID'=>$Class->ClassLink,
             'name'=>$Name,
