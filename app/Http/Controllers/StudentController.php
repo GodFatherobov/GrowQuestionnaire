@@ -22,9 +22,6 @@ class StudentController extends Controller
             'name'=>$Name,
         ]);
         $questionID=1;
-        return view('student.Question',[
-            'QuestionID'=> $questionID,
-            'StudentID'=> $Student->id,
-        ]);
+        return redirect('student.Question',['Sid' => $Student->id,'Qid'=>$questionID]);
     }
 }
