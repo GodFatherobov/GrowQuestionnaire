@@ -18,7 +18,7 @@ class StudentController extends Controller
         $Class=course::where('ClassLink',$ClassLink)->first();
         $Name=request('Name');
         student::create([
-            'classID'=>$Class->ClassLink,
+            'classID'=>$Class->id,
             'name'=>$Name,
         ]);
         return view('student.Question');
