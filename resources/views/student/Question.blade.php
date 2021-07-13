@@ -6,7 +6,7 @@
 <body>
 
 <h1>你會如何回應 ?</h1>
-<h3>{{$Qid}}. 情境</h3>
+<h3>{{$question->id}}. 情境</h3>
     <h3>{{$question->Question}}</h3>
     <form action="" enctype="multipart/form-data" method="post">
 <div>
