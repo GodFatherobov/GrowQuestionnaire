@@ -107,6 +107,6 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        return $img->response('pdf');
+        return $img->response('png');
     }
 }
