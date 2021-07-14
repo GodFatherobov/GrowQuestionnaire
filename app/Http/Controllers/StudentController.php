@@ -57,13 +57,13 @@ class StudentController extends Controller
         ]);
     }
     function MakeChart($Sid){
-        $img = Image::make(public_path('Chart1.png'));
         $answers=answer::where('studentID',$Sid)->get();
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($answers as $answer){
             $weight=question::find($answer->questionID);
             if($answer->answer=='A'){
                 $S1=$S1+$weight->S1;
+                dd($S1);
             }
             if ($answer->answer=='B'){
                 $S2=$S2+$weight->S2;
@@ -75,11 +75,28 @@ class StudentController extends Controller
                 $S4=$S4+$weight->S4;
             }
         }
-        dd($S1,$S2,$S3,$S4);
+        $sum=$S1+$S2+$S3+$S4;
 
-
-
-        $img->text('This is a example ', 825, 1405, function($font) {
+        $img = Image::make(public_path('Chart1.png'));
+        $img->text($S1, 420, 1270, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(24);
+            $font->align('center');
+            $font->valign('top');
+        });
+        $img->text($S2, 560, 1270, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(24);
+            $font->align('center');
+            $font->valign('top');
+        });
+        $img->text($S3, 690, 1405, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(24);
+            $font->align('center');
+            $font->valign('top');
+        });
+        $img->text($S4, 830, 1405, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(24);
             $font->align('center');
