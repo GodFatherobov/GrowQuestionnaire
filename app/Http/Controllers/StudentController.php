@@ -57,7 +57,7 @@ class StudentController extends Controller
         ]);
     }
     function MakeChart($Sid){
-        $img = Image::make(public_path('public/Chart1.png'));
+        $img = Image::make(public_path('Chart1.png'));
         return $img->response('png');
 
     }
