@@ -6,6 +6,7 @@ use App\Models\course;
 use App\Models\student;
 use App\Models\User;
 use App\Models\question;
+use App\Models\weight;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -75,7 +76,12 @@ class AdminController extends Controller
             'Option2'=>'詢問她打算如何重回正軌，並鼓勵她付諸實踐。',
             'Option3'=>'與她一起討論問題並設定目標。',
             'Option4'=>'觀察她的績效表現，並讓她知道自己隨時都能得到支持。',
+            'S1'=>3,
+            'S2'=>1,
+            'S3'=>2,
+            'S4'=>0,
             ]);
+
         //Q2
         question::create([
             'Question'=>'一名新團隊成員開始在工作中平穩地學習領導者分配的工作，且他的績效表現正在進步。他過早地要求想做更具挑戰性的工作。',
@@ -83,6 +89,10 @@ class AdminController extends Controller
             'Option2'=>'觀察其績效表現，在適當時機給予回饋。',
             'Option3'=>'鼓勵他學得很快，並詢問他關於想要做的新任務類型的意見。',
             'Option4'=>'強調他目前需要完成的工作之重要性。',
+            'S1'=>3,
+            'S2'=>0,
+            'S3'=>2,
+            'S4'=>1,
         ]);
         //Q3
         question::create([
@@ -91,6 +101,10 @@ class AdminController extends Controller
             'Option2'=>'給予所需資源和權力，並在需要時適當監控。',
             'Option3'=>'將新工作拆解成一個個詳細的步驟，並向他說明。',
             'Option4'=>'討論他的疑慮，提供支持和鼓勵。',
+            'S1'=>2,
+            'S2'=>1,
+            'S3'=>0,
+            'S4'=>3,
         ]);
         //Q4
         question::create([
@@ -99,6 +113,10 @@ class AdminController extends Controller
             'Option2'=>'指導她如何執行此改變。',
             'Option3'=>'仔細傾聽，提出需要澄清的問題，並讓她負責執行。',
             'Option4'=>'聽取她的建議，解釋此改變會如何對她的角色產生影響，並告訴她如何執行此改變。',
+            'S1'=>2,
+            'S2'=>0,
+            'S3'=>3,
+            'S4'=>1,
         ]);
         //Q5
         question::create([
@@ -107,6 +125,10 @@ class AdminController extends Controller
             'Option2'=>'向她說明需要完成的工作，並解釋其重要性；如有需要，回答她的問題。',
             'Option3'=>'明確告知她的角色、責任和目標，並密切監控她的表現。',
             'Option4'=>'與她進行友善的對話，並表達明確的擔憂。',
+            'S1'=>0,
+            'S2'=>2,
+            'S3'=>3,
+            'S4'=>1,
         ]);
         //Q6
         question::create([
@@ -115,6 +137,10 @@ class AdminController extends Controller
             'Option2'=>'繼續密切監控並指導她的工作。',
             'Option3'=>'給她冒險的自由，以變得更有效率。',
             'Option4'=>'解釋工作效率為何重要，同時繼續提供指導和支持。',
+            'S1'=>1,
+            'S2'=>2,
+            'S3'=>0,
+            'S4'=>3,
         ]);
         //Q7
         question::create([
@@ -123,6 +149,10 @@ class AdminController extends Controller
             'Option2'=>'與團隊成員一起討論他擔心的問題，提供支持並表達對他的能力充滿信心。',
             'Option3'=>'傾聽他的疑慮，向他解釋為何新的流程可行，並在實施新流程時加以控制。',
             'Option4'=>'給予團隊成員執行新流程所需的權力及資源。',
+            'S1'=>0,
+            'S2'=>3,
+            'S3'=>1,
+            'S4'=>2,
         ]);
         //Q8
         question::create([
@@ -131,6 +161,10 @@ class AdminController extends Controller
             'Option2'=>'當你要做出必要決策時，詢問她的意見。',
             'Option3'=>'以界定清楚的方式循序漸進地指導她完成工作。',
             'Option4'=>'稱讚她的工作，並讓她參與專案的決策。',
+            'S1'=>3,
+            'S2'=>1,
+            'S3'=>0,
+            'S4'=>2,
         ]);
         //Q9
         question::create([
@@ -139,6 +173,10 @@ class AdminController extends Controller
             'Option2'=>'詢問他的建議，但要確保任務小組達成目標。',
             'Option3'=>'建立對於該員工明確的目標和期望，並與其溝通。',
             'Option4'=>'鼓勵該團隊成員提出看法，並肯定他所做出的任何正面貢獻。',
+            'S1'=>0,
+            'S2'=>2,
+            'S3'=>3,
+            'S4'=>1,
         ]);
         //Q10
         question::create([
@@ -147,6 +185,10 @@ class AdminController extends Controller
             'Option2'=>'明確表示新標準已經建立，並進行嚴密監督。',
             'Option3'=>'觀察該團隊成員的績效表現，以評估是否有必要採取進一步行動。',
             'Option4'=>'與該團隊成員談話，並解釋建立新標準的必要性。',
+            'S1'=>2,
+            'S2'=>0,
+            'S3'=>1,
+            'S4'=>3,
         ]);
         //Q11
         question::create([
@@ -155,6 +197,10 @@ class AdminController extends Controller
             'Option2'=>'讓她參與決策，向她保證會提供支持，並在合適的時候給予回饋。',
             'Option3'=>'與她討論如何充分利用她過去的績效表現，然後給予她如何完成此項工作的詳細指導。',
             'Option4'=>'繼續讓她獨立完成工作。',
+            'S1'=>0,
+            'S2'=>3,
+            'S3'=>1,
+            'S4'=>2,
         ]);
         //Q12
         question::create([
@@ -163,7 +209,12 @@ class AdminController extends Controller
             'Option2'=>'繼續觀察該團隊成員的行為，但讓他自行解決與其他團隊成員的意見分歧。',
             'Option3'=>'迅速而堅定地採取措施，讓團隊達成一致共識。',
             'Option4'=>'與該團隊成員探討意見分歧的狀況，並讓他知道你對他的支持。',
+            'S1'=>1,
+            'S2'=>3,
+            'S3'=>0,
+            'S4'=>2,
         ]);
+
         return('init complete');
     }
 }
