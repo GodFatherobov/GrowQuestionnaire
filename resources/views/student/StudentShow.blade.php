@@ -16,7 +16,9 @@
 @endforeach
 </table>
     <a href="{{ route('student.MakeChart',['Sid' => $student->id]) }}" class="btn btn-default"> 產生分析表 </a>
-    <button href="{{ route('student.MakeChart',['Sid' => $student->id]) }}" type="button" class="btn btn-default">產生分析表</button>
+    <a href="{{ route('student.MakeChart',['Sid' => $student->id]) }}" >
+        <button type="button" class="label label-default pull-xs-right">產生分析表</button
+        ></a>
 </div>
 </body>
 </html>
