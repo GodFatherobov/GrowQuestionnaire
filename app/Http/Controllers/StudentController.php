@@ -72,7 +72,7 @@ class StudentController extends Controller
                 $S3=$S3+$weight->S3;
             }
             if ($answer->answer=='D'){
-                $S3=$S4+$weight->S3;
+                $S4=$S4+$weight->S4;
             }
         }
         dd($S1,$S2,$S3,$S4);
