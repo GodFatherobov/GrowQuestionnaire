@@ -58,6 +58,7 @@ class StudentController extends Controller
     }
     function MakeChart($Sid){
         $img = Image::make(public_path('Chart1.png'));
+        $img->text('This is a example ', 120, 100);
         return $img->response('png');
 
     }
