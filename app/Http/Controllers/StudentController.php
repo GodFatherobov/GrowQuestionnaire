@@ -79,35 +79,34 @@ class StudentController extends Controller
         $img = Image::make(public_path('Chart1.png'));
         $img->text($S1, 420, 1270, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S2, 560, 1270, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S3, 690, 1270, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S4, 830, 1270, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($sum, 830, 1405, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         return $img->response('png');
-
     }
 }
