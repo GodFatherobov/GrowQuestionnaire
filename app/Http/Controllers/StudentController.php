@@ -59,6 +59,23 @@ class StudentController extends Controller
     function MakeChart($Sid){
         $img = Image::make(public_path('Chart1.png'));
         $answers=answer::where('studentID',$Sid)->get();
+        $S1=0;$S2=0;$S3=0;$S4=0;
+        foreach ($answers as $answer){
+            $weight=question::where('id',$answer->Qid);
+            if($answer->answer=='A'){
+                $S1=$S1+$weight->S1;
+            }
+            if ($answer->answer=='B'){
+                $S2=$S2+$weight->S2;
+            }
+            if ($answer->answer=='C'){
+                $S3=$S3+$weight->S3;
+            }
+            if ($answer->answer=='D'){
+                $S3=$S4+$weight->S3;
+            }
+        }
+        dd($S1,$S2,$S3,$S4);
 
 
 
