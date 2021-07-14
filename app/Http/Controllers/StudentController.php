@@ -7,6 +7,7 @@ use App\Models\course;
 use App\Models\question;
 use App\Models\student;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class StudentController extends Controller
 {
@@ -54,5 +55,10 @@ class StudentController extends Controller
             'student'=> $student,
             'answers'=> $answers,
         ]);
+    }
+    function MakeChart($Sid){
+        $img = Image::make(public_path('public/Chart1.png'));
+        return $img->response('png');
+
     }
 }

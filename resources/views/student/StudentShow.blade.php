@@ -6,7 +6,7 @@
 <body>
 <div align="center">
 <h1>{{$student->name}}的作答情況</h1>
-<table border="1" width="300" align="center">
+<table border="1" width="250" align="center">
 
 @foreach($answers as $answer)
     <tr>
@@ -15,6 +15,7 @@
     </tr>
 @endforeach
 </table>
+    <button href="{{ route('student.ShowChart',['Sid' => $Sid]) }}" type="button" class="btn btn-default">產生分析表</button>
 </div>
 </body>
 </html>
