@@ -15,7 +15,6 @@
     </tr>
 @endforeach
 </table>
-    <a href="{{ route('student.MakeChart',['Sid' => $student->id]) }}" class="btn btn-default"> 產生分析表 </a>
     <Form method="get" action="{{ route('student.MakeChart',['Sid' => $student->id]) }}">
         <button type="submit" class="label label-default pull-xs-right">產生分析表</button>
     </Form>
