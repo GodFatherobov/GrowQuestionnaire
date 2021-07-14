@@ -63,7 +63,6 @@ class StudentController extends Controller
             $weight=question::find($answer->questionID);
             if($answer->answer=='A'){
                 $S1=$S1+$weight->S1;
-                dd($S1);
             }
             if ($answer->answer=='B'){
                 $S2=$S2+$weight->S2;
