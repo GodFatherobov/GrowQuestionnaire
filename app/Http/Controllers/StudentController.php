@@ -58,8 +58,8 @@ class StudentController extends Controller
     }
     function MakeChart($Sid){
         $img = Image::make(public_path('Chart1.png'));
-        $answer=answer::where('studentID',$Sid)->get();
-        dd($answer);
+        $answers=answer::where('studentID',$Sid)->get();
+        dd($answers[0]);
         $img->text('This is a example ', 825, 1405, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(24);
