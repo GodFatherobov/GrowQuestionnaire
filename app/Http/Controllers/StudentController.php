@@ -59,7 +59,7 @@ class StudentController extends Controller
     function MakeChart($Sid){
         $img = Image::make(public_path('Chart1.png'));
         $img->text('This is a example ', 825, 1405, function($font) {
-            $font->file('public/font.ttf');
+            $font->file(public_path('font.ttf'));
             $font->size(24);
             $font->align('center');
         });
