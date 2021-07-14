@@ -15,7 +15,7 @@
     </tr>
 @endforeach
 </table>
-    <button href="{{ route('student.ShowChart',['Sid' => $student->id]) }}" type="button" class="btn btn-default">產生分析表</button>
+    <a href="{{ route('student.ShowChart',['Sid' => $student->id]) }}" class="btn btn-default"> 產生分析表 </a>
 </div>
 </body>
 </html>
