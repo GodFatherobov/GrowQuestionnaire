@@ -14,5 +14,9 @@ class question extends Model
         'Option2',
         'Option3',
         'Option4',
+        'S1',
+        'S2',
+        'S3',
+        'S4',
     ];
 }
