@@ -61,7 +61,7 @@ class StudentController extends Controller
         $answers=answer::where('studentID',$Sid)->get();
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($answers as $answer){
-            $weight=question::find($answer->Qid);
+            $weight=question::find($answer->questionID);
             if($answer->answer=='A'){
                 $S1=$S1+$weight->S1;
             }
