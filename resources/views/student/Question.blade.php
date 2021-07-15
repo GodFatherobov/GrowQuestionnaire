@@ -6,7 +6,7 @@
 <body>
 
 <h1>你會如何回應 ?</h1>
-<h3>{{$question->id}}. 情境</h3>
+<h2>{{$question->id}}. 情境</h2>
     <h3>{{$question->Question}}</h3>
     <form action="{{ route('student.StoreAnswer',['Sid' => $Sid,'Qid'=>$Qid]) }}" enctype="multipart/form-data" method="post">
         @csrf
