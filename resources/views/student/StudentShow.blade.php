@@ -15,6 +15,9 @@
     </tr>
 @endforeach
 </table>
+    <Form method="get" action="/{{$student->id}}/OtherShow">
+        <button type="submit" class="label label-default pull-xs-right">others填寫狀況</button>
+    </Form>
     <Form method="get" action="{{ route('student.MakeChart',['Sid' => $student->id]) }}">
         <button type="submit" class="label label-default pull-xs-right">產生分析表</button>
     </Form>

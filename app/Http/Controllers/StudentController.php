@@ -142,4 +142,12 @@ class StudentController extends Controller
         else
             return('感謝您的填寫 !');
     }
+    function OtherIndex($Sid){
+        $student=student::find($Sid);
+        $others=other::where('studentID');
+        return view('student.OtherShow',[
+            'others'=> $others,
+            'student'=>$student,
+        ]);
+    }
 }
