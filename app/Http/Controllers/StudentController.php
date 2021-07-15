@@ -108,4 +108,10 @@ class StudentController extends Controller
         });
         return $img->response('png');
     }
+    function OthersQuiz($Sid){
+        $student=student::find($Sid);
+        return view('student.OthersQuiz',[
+            'student'=> $student,
+        ]);
+    }
 }
