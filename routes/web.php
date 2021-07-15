@@ -29,6 +29,7 @@ Route::post('/StoreAnswer/{Sid}/{Qid}', [App\Http\Controllers\StudentController:
 Route::get('/Student/{Sid}', [App\Http\Controllers\StudentController::class, 'StudentShow'])->name('student.StudentShow');
 Route::get('/Student/{Sid}/chart', [App\Http\Controllers\StudentController::class, 'MakeChart'])->name('student.MakeChart');
 
+Route::get('/{Sid}/others', [App\Http\Controllers\StudentController::class, 'OthersQuiz'])->name('student.OthersQuiz');
 
 Route::get('/AdminLogin', [App\Http\Controllers\AdminController::class, 'LoginPage'])->name('backend.AdminLogin');
 Route::post('/AdminLogin', [App\Http\Controllers\AdminController::class, 'login'])->name('backend.AdminLogin');
@@ -36,6 +37,6 @@ Route::get('/ClassIndex', [App\Http\Controllers\AdminController::class, 'ClassIn
 Route::post('/ClassCreate', [App\Http\Controllers\AdminController::class, 'ClassCreate'])->name('backend.ClassCreate');
 Route::get('/Class/{id}', [App\Http\Controllers\AdminController::class, 'ClassShow'])->name('backend.ClassShow');
 
-Route::get('/{Sid}/others', [App\Http\Controllers\AdminController::class, 'OthersQuiz'])->name('student.OthersQuiz');
+
 
 Route::get('/test', [App\Http\Controllers\AdminController::class, 'test'])->name('test');
