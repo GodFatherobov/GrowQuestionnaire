@@ -4,7 +4,7 @@
     <title>後台管理</title>
 </head>
 <body>
-<img src={{$img}}>
+{{$img}}
 
 </body>
 </html>
