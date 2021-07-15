@@ -6,8 +6,8 @@
 <body>
 
 <h1>這位領導者會如何回應 ?</h1>
-<h2 style="color:green">{{$question->id}}. 情境</h2>
-    <h3>{{$question->Question-12}}</h3>
+<h2 style="color:green">{{$question->id-12}}. 情境</h2>
+    <h3>{{$question->Question}}</h3>
     <form action="{{ route('student.StoreOtherAnswer',['Sid' => $Sid,'Qid'=>$Qid,'Oid'=>$Oid]) }}" enctype="multipart/form-data" method="post">
         @csrf
 <div>
