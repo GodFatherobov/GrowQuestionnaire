@@ -106,7 +106,6 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->save('public/bar.png');
 
 
         //return($img->response('png'));
