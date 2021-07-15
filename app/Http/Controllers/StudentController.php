@@ -106,8 +106,6 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-
-
         //return($img->response('png'));
         return view('student.chart2');
     }
