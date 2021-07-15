@@ -36,17 +36,16 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
-        $Student=student::find($Sid);
         answer::updateOrCreate(
             ['studentID'=>$Sid , 'questionID'=>$Qid],
             ['answer'=>request('answer')]
         );
         $Qid++;
         if($Qid<=12){
-        return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>$Qid]);
+        return \Redirect::route('student.Question',['Sid' => $Sid,'Qid'=>$Qid]);
         }
         else
-            return view('student.FinishQuiz',['Sid' => $Student->id]);
+            return view('student.FinishQuiz',['Sid' => $Sid]);
     }
     function StudentShow($Sid){
         $student=student::find($Sid);
@@ -121,5 +120,26 @@ class StudentController extends Controller
             'type'=>request('type'),
         ]);
         return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$other->id,'Qid'=>13]);
+    }
+    function ShowOtherQuestion($Sid,$Qid,$Oid){
+        $question=question::find($Qid);
+        return view('student.Question',[
+            'question'=>$question,
+            'Qid'=>$Qid,
+            'Sid'=>$Sid,
+            'Oid'=>$Oid,
+        ]);
+    }
+    function StoreOtherAnswer($Sid,$Qid,$Oid){
+        answer::updateOrCreate(
+            ['otherID'=>$Oid , 'questionID'=>$Qid],
+            ['answer'=>request('answer')]
+        );
+        $Qid++;
+        if($Qid<=24){
+            return \Redirect::route('student.Question',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
+        }
+        else
+            return view('student.FinishQuiz',['Sid' => $Sid,'Oid'=>$Oid]);
     }
 }
