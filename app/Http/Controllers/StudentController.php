@@ -153,7 +153,7 @@ class StudentController extends Controller
     function OtherShow($Oid){
         $other=student::find($Oid);
         $answers=answer::where('otherID',$Oid)->get();
-        return view('student.StudentShow',[
+        return view('student.OtherShow',[
             'other'=> $other,
             'answers'=> $answers,
         ]);
