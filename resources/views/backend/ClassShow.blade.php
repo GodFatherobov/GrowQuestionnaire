@@ -8,7 +8,7 @@
 <h1>課程名稱：{{$class->ClassName}}</h1>
     <p>課程問卷連結：<a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</a></p>
     <p>學員清單</p>
-    <table border="1" width="350" align="center">
+    <table border="1" width="500" align="center">
         <tr>
             <td align="center"><span style="font-size:18px;">學員姓名</span></td>
             <td align="center"><span style="font-size:18px;">邀請問卷網址</span></td>
