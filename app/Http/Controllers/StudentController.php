@@ -140,6 +140,6 @@ class StudentController extends Controller
             return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
         }
         else
-            return('完成測驗');
+            return('感謝您的填寫 !');
     }
 }
