@@ -7,7 +7,7 @@
 
 <h1>Other問卷填寫說明</h1>
 
-<form action="" enctype="multipart/form-data" method="post">
+<form action="/{{$student->id}}/others/Quiz" enctype="multipart/form-data" method="post">
     @csrf
     <h2>領導者名字：{{$student->name}}</h2>
     <h1 style="color:green">目的</h1>
