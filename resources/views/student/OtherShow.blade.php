@@ -10,7 +10,7 @@
 
 @foreach($answers as $answer)
     <tr>
-        <td align="center"><span style="font-size:18px;">第{{($answer->questionID)/2}}題</span></td>
+        <td align="center"><span style="font-size:18px;">第{{($answer->questionID)-12}}題</span></td>
         <td align="center"><span style="font-size:18px;">{{$answer->answer}}</span></td>
     </tr>
 @endforeach
