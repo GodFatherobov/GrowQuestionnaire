@@ -109,8 +109,8 @@ class StudentController extends Controller
         $img->save('public/bar.png');
 
 
-        return($img->response('png'));
-        //return view('student.chart2');
+        //return($img->response('png'));
+        return view('student.chart2');
     }
     function OthersQuiz($Sid){
         $student=student::find($Sid);
