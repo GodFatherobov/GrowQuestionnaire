@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-$Sid=1;
+use App\Models\answer;use App\Models\question;use Intervention\Image\Image;$Sid=1;
 $answers=answer::where('studentID',$Sid)->get();
 $S1=0;$S2=0;$S3=0;$S4=0;
 foreach ($answers as $answer){
