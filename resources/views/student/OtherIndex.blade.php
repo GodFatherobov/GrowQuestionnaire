@@ -12,7 +12,7 @@
     </tr>
 @foreach($others as $other)
     <tr>
-        <td align="center"><span style="font-size:18px;">{{$other->type}}</span></td>
+        <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.OtherShow', ['Oid' => $other->id]) }}">{{$other->type}}</a></span></td>
     </tr>
 @endforeach
 </table>

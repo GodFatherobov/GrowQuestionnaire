@@ -150,4 +150,12 @@ class StudentController extends Controller
             'student'=>$student,
         ]);
     }
+    function OtherShow($Oid){
+        $other=student::find($Oid);
+        $answers=answer::where('otherID',$Oid)->get();
+        return view('student.StudentShow',[
+            'other'=> $other,
+            'answers'=> $answers,
+        ]);
+    }
 }

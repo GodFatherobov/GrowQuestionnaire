@@ -34,7 +34,7 @@ Route::post('/{Sid}/others', [App\Http\Controllers\StudentController::class, 'In
 Route::get('/{Sid}/others/{Oid}/{Qid}', [App\Http\Controllers\StudentController::class, 'ShowOtherQuestion'])->name('student.OthersQuestion');
 Route::post('/{Sid}/others/{Oid}/{Qid}', [App\Http\Controllers\StudentController::class, 'StoreOtherAnswer'])->name('student.StoreOtherAnswer');
 Route::get('/{Sid}/OtherIndex', [App\Http\Controllers\StudentController::class, 'OtherIndex'])->name('student.OtherIndex');
-
+Route::get('/OtherShow/{Oid}', [App\Http\Controllers\StudentController::class, 'OtherShow'])->name('student.OtherShow');
 
 Route::get('/AdminLogin', [App\Http\Controllers\AdminController::class, 'LoginPage'])->name('backend.AdminLogin');
 Route::post('/AdminLogin', [App\Http\Controllers\AdminController::class, 'login'])->name('backend.AdminLogin');
