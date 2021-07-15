@@ -31,7 +31,7 @@ Route::get('/Student/{Sid}/chart', [App\Http\Controllers\StudentController::clas
 
 Route::get('/{Sid}/others', [App\Http\Controllers\StudentController::class, 'OthersQuiz'])->name('student.OthersQuiz');
 Route::post('/{Sid}/others', [App\Http\Controllers\StudentController::class, 'InputType'])->name('student.OthersQuiz');
-Route::get('/{Sid}/others/{Oid}/{Qid}', [App\Http\Controllers\StudentController::class, 'ShowOtherQuestion'])->name('student.OtherQuestion');
+Route::get('/{Sid}/others/{Oid}/{Qid}', [App\Http\Controllers\StudentController::class, 'ShowOtherQuestion'])->name('student.OthersQuestion');
 
 Route::get('/AdminLogin', [App\Http\Controllers\AdminController::class, 'LoginPage'])->name('backend.AdminLogin');
 Route::post('/AdminLogin', [App\Http\Controllers\AdminController::class, 'login'])->name('backend.AdminLogin');
