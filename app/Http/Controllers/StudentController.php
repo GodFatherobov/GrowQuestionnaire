@@ -35,7 +35,9 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
-        answer::update([
+        $answer=answer::where('studentID',$Sid)->where('questionID',$Qid)->get();
+        dd($answer);
+        $answer=answer::create([
             'studentID'=>$Sid,
             'questionID'=>$Qid,
             'answer'=>request('answer'),
