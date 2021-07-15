@@ -137,9 +137,9 @@ class StudentController extends Controller
         );
         $Qid++;
         if($Qid<=24){
-            return \Redirect::route('student.Question',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
+            return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
         }
         else
-            return view('student.FinishQuiz',['Sid' => $Sid,'Oid'=>$Oid]);
+            return('完成測驗');
     }
 }

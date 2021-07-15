@@ -5,13 +5,13 @@
 </head>
 <body>
 
-<h1>你會如何回應 ?</h1>
+<h1>這位領導者會如何回應 ?</h1>
 <h2 style="color:green">{{$question->id}}. 情境</h2>
     <h3>{{$question->Question}}</h3>
     <form action="{{ route('student.StoreAnswer',['Sid' => $Sid,'Qid'=>$Qid]) }}" enctype="multipart/form-data" method="post">
         @csrf
 <div>
-    <h3>行動選項 – 你可能會 ...</h3>
+    <h3>行動選項 – 該領導者可能會 ...</h3>
     <div class="row">
     <input type="radio" name="answer" id="A" value="A" />
     <label for="A">(A){{$question->Option1}}  </label>
