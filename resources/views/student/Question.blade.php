@@ -29,7 +29,7 @@
 
 <div>
     <input type="radio" name="answer" id="D" value="D" />
-    <label for="D">D) {{$question->Option4}} </label>
+    <label for="D">(D) {{$question->Option4}} </label>
 </div>
 
             <button class="btn">下一頁</button>
