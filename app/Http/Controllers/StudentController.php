@@ -121,7 +121,7 @@ class StudentController extends Controller
         ]);
         return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$other->id,'Qid'=>13]);
     }
-    function ShowOtherQuestion($Sid,$Qid,$Oid){
+    function ShowOtherQuestion($Sid,$Oid,$Qid){
         $question=question::find($Qid);
         return view('student.OtherQuestion',[
             'question'=>$question,
