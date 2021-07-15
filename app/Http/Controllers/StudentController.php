@@ -111,8 +111,8 @@ class StudentController extends Controller
         }, 5, true);
 
 
-
-        return view('student.chart2');
+        return($image);
+        //return view('student.chart2');
     }
     function OthersQuiz($Sid){
         $student=student::find($Sid);
