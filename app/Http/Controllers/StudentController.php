@@ -21,7 +21,7 @@ class StudentController extends Controller
     function InputName($ClassLink){
         $Class=course::where('ClassLink',$ClassLink)->first();
         $Name=request('Name');
-        $Student=student::findOrCreate([
+        $Student=student::firstOrCreate([
             'classID'=>$Class->id,
             'name'=>$Name,
         ]);
