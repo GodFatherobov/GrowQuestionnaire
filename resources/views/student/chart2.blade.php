@@ -4,6 +4,6 @@
     <title>後台管理</title>
 </head>
 <body>
-<img src="data:image/jpg;charset=utf8;base64,{{base64_encode($img)}}"/>
+<img src="{{$img}}"/>
 </body>
 </html>
