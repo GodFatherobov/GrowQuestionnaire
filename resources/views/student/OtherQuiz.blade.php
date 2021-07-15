@@ -9,7 +9,7 @@
 
 <form action="" enctype="multipart/form-data" method="post">
     @csrf
-    <p>領導者名字：{{$Student->name}}</p>
+    <p>領導者名字：{{$student->name}}</p>
     <h1 style="color:green">目的</h1>
     <p>此評量工具用於評估你嘗試影響他人的行為和態度時，所使用的領導行為。<br>
         透過「LEAD Self 自我評估」所收集的資訊，可以深入了解你目前的優勢，以及領導力技巧發展的領域。它提供<br>
