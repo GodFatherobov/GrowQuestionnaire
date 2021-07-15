@@ -6,9 +6,17 @@
 <body>
 
 <h1>Other問卷填寫說明</h1>
-
-<form action="/{{$student->id}}/others/Quiz" enctype="multipart/form-data" method="post">
+<form action="" enctype="multipart/form-data" method="post">
     @csrf
+    <div>
+        <p>您是這位領導人的(選擇一個)：</p>
+    <select name="type" id="type">
+        <option value="上級主管">上級主管</option>
+        <option value="部屬">部屬</option>
+        <option value="同事">同事</option>
+        <option value="其他">其他</option>
+    </select>
+        <div>
     <h2>領導者名字：{{$student->name}}</h2>
     <h1 style="color:green">目的</h1>
     <p>本評量工具用於概括上述人員的影響行為。<br>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\answer;
 use App\Models\course;
+use App\Models\other;
 use App\Models\question;
 use App\Models\student;
 use Illuminate\Http\Request;
@@ -113,5 +114,12 @@ class StudentController extends Controller
         return view('student.OtherQuiz',[
             'student'=> $student,
         ]);
+    }
+    function InputType($Sid){
+        $other=other::create([
+            'studentID'=>$Sid,
+            'type'=>request('type'),
+        ]);
+        return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$other->id,'Qid'=>13]);
     }
 }
