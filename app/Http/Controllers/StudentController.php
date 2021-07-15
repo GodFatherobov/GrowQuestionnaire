@@ -108,7 +108,7 @@ class StudentController extends Controller
         });
         //return $img->response('png');
         return view('student.chart2',[
-            'img'=>$img,
+            'img'=>$img->response('png'),
         ]);
     }
     function OthersQuiz($Sid){
