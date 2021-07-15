@@ -4,6 +4,6 @@
     <title>後台管理</title>
 </head>
 <body>
-<img src="public/bar.png" alt="" class="w-full mt-4">
+<img src="data:image/jpg;charset=utf8;base64,{{base64_encode($post->image)}}"/>
 </body>
 </html>

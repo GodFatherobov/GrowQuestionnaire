@@ -106,8 +106,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->save('public/bar.png');
-        return view('student.chart2');
+        return view('student.chart2',['img'=>$img]);
     }
     function OthersQuiz($Sid){
         $student=student::find($Sid);
