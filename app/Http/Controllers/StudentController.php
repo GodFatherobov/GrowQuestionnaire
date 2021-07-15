@@ -45,7 +45,7 @@ class StudentController extends Controller
         return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>$Qid]);
         }
         else
-            return \Redirect::route('student.FinishQuiz',['Sid' => $Student->id]);
+            return view('student.FinishQuiz',['Sid' => $Student->id]);
     }
     function StudentShow($Sid){
         $student=student::find($Sid);
