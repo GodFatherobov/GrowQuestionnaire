@@ -110,7 +110,7 @@ class StudentController extends Controller
     }
     function OthersQuiz($Sid){
         $student=student::find($Sid);
-        return view('student.OthersQuiz',[
+        return view('student.OtherQuiz',[
             'student'=> $student,
         ]);
     }
