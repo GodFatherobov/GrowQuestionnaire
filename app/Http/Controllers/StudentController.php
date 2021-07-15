@@ -35,12 +35,10 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
-        $answer=answer::where('studentID',$Sid)->where('questionID',$Qid)->first();
-        $answer->updateOrCreate([
-            'studentID'=>$Sid,
-            'questionID'=>$Qid,
-            'answer'=>request('answer'),
-        ]);
+        answer::updateOrCreate(
+            ['studentID'=>$Sid , 'questionID'=>$Qid],
+            ['answer'=>request('answer')]
+        );
         $Qid++;
         if($Qid<=12){
         $Student=student::find($Sid);
