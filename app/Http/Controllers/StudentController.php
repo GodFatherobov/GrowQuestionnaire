@@ -144,7 +144,7 @@ class StudentController extends Controller
     }
     function OtherIndex($Sid){
         $student=student::find($Sid);
-        $others=other::where('studentID');
+        $others=other::where('studentID')->get();
         return view('student.OtherIndex',[
             'others'=> $others,
             'student'=>$student,
