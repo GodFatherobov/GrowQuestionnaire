@@ -35,7 +35,7 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
-        answer::create([
+        answer::update([
             'studentID'=>$Sid,
             'questionID'=>$Qid,
             'answer'=>request('answer'),
@@ -46,7 +46,7 @@ class StudentController extends Controller
         return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>$Qid]);
         }
         else
-            return ('作答完成');
+            return view('student.FinishQuiz');
     }
     function StudentShow($Sid){
         $student=student::find($Sid);
