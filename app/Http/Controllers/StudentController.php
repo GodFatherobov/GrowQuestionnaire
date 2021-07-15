@@ -130,7 +130,7 @@ class StudentController extends Controller
             'Oid'=>$Oid,
         ]);
     }
-    function StoreOtherAnswer($Sid,$Qid,$Oid){
+    function StoreOtherAnswer($Sid,$Oid,$Qid){
         answer::updateOrCreate(
             ['otherID'=>$Oid , 'questionID'=>$Qid],
             ['answer'=>request('answer')]
