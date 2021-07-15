@@ -106,12 +106,9 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $image = Image::cache(function($img) {
-            $img->make('public/foo.jpg')->resize(300, 200)->greyscale();
-        }, 5, true);
 
 
-        return($image);
+        return($img->response('png'));
         //return view('student.chart2');
     }
     function OthersQuiz($Sid){
