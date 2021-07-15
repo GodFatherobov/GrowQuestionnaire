@@ -16,7 +16,7 @@
 @endforeach
 </table>
     <div>
-    <Form method="get" action="/{{$student->id}}/OtherShow">
+    <Form method="get" action="{{ route('student.OtherIndex',['Sid' => $student->id]) }}">
         <button type="submit" class="label label-default pull-xs-right">others填寫狀況</button>
     </Form>
     <Form method="get" action="{{ route('student.MakeChart',['Sid' => $student->id]) }}">
