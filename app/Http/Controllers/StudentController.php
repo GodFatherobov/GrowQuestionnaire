@@ -123,7 +123,7 @@ class StudentController extends Controller
     }
     function ShowOtherQuestion($Sid,$Qid,$Oid){
         $question=question::find($Qid);
-        return view('student.Question',[
+        return view('student.OtherQuestion',[
             'question'=>$question,
             'Qid'=>$Qid,
             'Sid'=>$Sid,
