@@ -159,6 +159,8 @@ class StudentController extends Controller
         ]);
     }
     function Chart($Sid){
-        return view('student.chart2');
+        return view('student.chart2',[
+            'Sid'=>$Sid,
+        ]);
     }
 }
