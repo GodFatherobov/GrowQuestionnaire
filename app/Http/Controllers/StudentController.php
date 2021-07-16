@@ -106,8 +106,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        //return($img->response('png'));
-        return view('student.chart2');
+        return($img->response('png'));
     }
     function OthersQuiz($Sid){
         $student=student::find($Sid);
@@ -158,5 +157,8 @@ class StudentController extends Controller
             'other'=> $other,
             'answers'=> $answers,
         ]);
+    }
+    function Chart($Sid){
+        return view('student.chart2');
     }
 }
