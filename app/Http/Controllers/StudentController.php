@@ -7,6 +7,7 @@ use App\Models\course;
 use App\Models\other;
 use App\Models\question;
 use App\Models\student;
+use PDF;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
