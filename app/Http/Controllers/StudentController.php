@@ -7,7 +7,7 @@ use App\Models\course;
 use App\Models\other;
 use App\Models\question;
 use App\Models\student;
-use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -161,6 +161,6 @@ class StudentController extends Controller
     }
     function Chart($Sid){
         $pdf = PDF::loadView('student.chart2', $Sid);
-        return $pdf->download('invoice.pdf');
+        return $pdf->download('chart2.pdf');
     }
 }
