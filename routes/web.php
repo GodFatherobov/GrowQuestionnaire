@@ -28,7 +28,7 @@ Route::get('/Quiz/{Sid}/{Qid}', [App\Http\Controllers\StudentController::class, 
 Route::post('/StoreAnswer/{Sid}/{Qid}', [App\Http\Controllers\StudentController::class, 'StoreAnswer'])->name('student.StoreAnswer');
 Route::get('/Student/{Sid}', [App\Http\Controllers\StudentController::class, 'StudentShow'])->name('student.StudentShow');
 Route::get('/Student/{Sid}/MakeChart', [App\Http\Controllers\StudentController::class, 'MakeChart'])->name('student.MakeChart');
-Route::get('/Student/{Sid}/chart', [App\Http\Controllers\StudentController::class, 'Chart'])->name('student.Chart');
+Route::get('/Student/{Sid}/chart', [App\Http\Controllers\StudentController::class, 'Chart'])->name('student.page2_pdf');
 
 
 Route::get('/{Sid}/others', [App\Http\Controllers\StudentController::class, 'OthersQuiz'])->name('student.OthersQuiz');
