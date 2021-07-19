@@ -113,6 +113,7 @@ class StudentController extends Controller
     }
     function MakeChart1($Sid){
         $student=student::find($Sid);
+        $encoded_char = mb_encode_numericentity('使用中文', array(0x0080, 0xffff, 0, 0xffff), 'UTF-8');
         $name = mb_encode_numericentity($student->name, array(0x0080, 0xffff, 0, 0xffff), 'UTF-8');
         $answers=answer::where('studentID',$Sid)->get();
         $S1=0;$S2=0;$S3=0;$S4=0;
@@ -132,7 +133,7 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.png'));
-        $img->text($name, 418, 175, function($font) {
+        $img->text($encoded_char, 418, 175, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
