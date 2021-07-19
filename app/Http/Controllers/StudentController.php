@@ -113,6 +113,7 @@ class StudentController extends Controller
     }
     function MakeChart1($Sid){
         $student=student::find($Sid);
+        dd($student->name);
         $answers=answer::where('studentID',$Sid)->get();
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($answers as $answer){
@@ -137,13 +138,13 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S1, 209, 458, function($font) {
+        $img->text($S1, 210, 458, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 209, 424, function($font) {
+        $img->text($S2, 210, 424, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
@@ -183,25 +184,25 @@ class StudentController extends Controller
             }
         }
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
-        $img->text($S1, 435, 567, function($font) {
+        $img->text($S1, 541, 458, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 470, 567, function($font) {
+        $img->text($S2, 541, 424, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 505, 567, function($font) {
+        $img->text($S3, 576, 424, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 540, 567, function($font) {
+        $img->text($S4, 576, 458, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
