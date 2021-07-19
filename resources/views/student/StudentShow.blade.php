@@ -24,7 +24,7 @@
     </Form>
     </div>
 </div>
-<img src="public/img/logo.png" alt="PUSA-Icon" class="img-rounded" style="height: 300px;"/>
+<img src="assets/logo.png" alt="PUSA-Icon" class="img-rounded" style="height: 300px;"/>
 
 </body>
 </html>
