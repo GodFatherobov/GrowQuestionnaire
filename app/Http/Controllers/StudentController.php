@@ -319,21 +319,73 @@ class StudentController extends Controller
         $img = Image::make(public_path('page3.png'));
         $Oids=other::where('studentID',$Sid)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;
+        $R1S1=0;$R1S2=0;$R1S3=0;$R1S4=0;
+        $R2S1=0;$R2S2=0;$R2S3=0;$R2S4=0;
+        $R3S1=0;$R3S2=0;$R3S3=0;$R3S4=0;
+        $R4S1=0;$R4S2=0;$R4S3=0;$R4S4=0;
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
                 $weight=question::find($answer->questionID);
                 if($answer->answer=='A'){
                     $S1=$S1+$weight->S1;
+                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                        $R1S1=$R1S1+1;
+                    }
+                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10){
+                        $R2S1=$R2S1+1;
+                    }
+                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                        $R3S1=$R3S1+1;
+                    }
+                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                        $R4S1=$R4S1+1;
+                    }
                 }
                 if ($answer->answer=='B'){
                     $S2=$S2+$weight->S2;
+                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                        $R1S2=$R1S2+1;
+                    }
+                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10){
+                        $R2S2=$R2S2+1;
+                    }
+                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                        $R3S2=$R3S2+1;
+                    }
+                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                        $R4S2=$R4S2+1;
+                    }
                 }
                 if ($answer->answer=='C'){
                     $S3=$S3+$weight->S3;
+                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                        $R1S3=$R1S3+1;
+                    }
+                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10) {
+                        $R2S3 = $R2S3 + 1;
+                    }
+                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                        $R3S3=$R3S3+1;
+                    }
+                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                        $R4S3=$R4S3+1;
+                    }
                 }
                 if ($answer->answer=='D'){
                     $S4=$S4+$weight->S4;
+                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                        $R1S4=$R1S4+1;
+                    }
+                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10){
+                        $R2S4=$R2S4+1;
+                    }
+                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                        $R3S4=$R3S4+1;
+                    }
+                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                        $R4S4=$R4S4+1;
+                    }
                 }
             }
         }
@@ -361,6 +413,13 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
+        $img->text($R1S1, 503, 554, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(12);
+            $font->align('center');
+            $font->valign('top');
+        });
+
         return($img->response('png'));
     }
 }
