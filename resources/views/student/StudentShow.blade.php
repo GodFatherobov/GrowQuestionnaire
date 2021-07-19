@@ -24,6 +24,8 @@
     </Form>
     </div>
 </div>
+<div align="right">
 <img src="{{ route('logo')}}" alt="加載錯誤">
+    </div>
 </body>
 </html>
