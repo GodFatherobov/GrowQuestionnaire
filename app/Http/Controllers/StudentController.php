@@ -127,31 +127,31 @@ class StudentController extends Controller
             }
         }
         $sum=($S1+$S2+$S3+$S4);
-        $img->text($S1, 435, 570, function($font) {
+        $img->text($S1, 435, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 470, 570, function($font) {
+        $img->text($S2, 470, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 505, 570, function($font) {
+        $img->text($S3, 505, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 540, 570, function($font) {
+        $img->text($S4, 540, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($sum, 540, 605, function($font) {
+        $img->text($sum, 540, 602, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
