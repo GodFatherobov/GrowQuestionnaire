@@ -326,9 +326,8 @@ class StudentController extends Controller
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
-                $weight=question::find($answer->questionID);
                 if($answer->answer=='A'){
-                    $S1=$S1+$weight->S1;
+                    $S1=$S1+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S1=$R1S1+1;
                     }
@@ -343,7 +342,7 @@ class StudentController extends Controller
                     }
                 }
                 if ($answer->answer=='B'){
-                    $S2=$S2+$weight->S2;
+                    $S2=$S2+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S2=$R1S2+1;
                     }
@@ -358,7 +357,7 @@ class StudentController extends Controller
                     }
                 }
                 if ($answer->answer=='C'){
-                    $S3=$S3+$weight->S3;
+                    $S3=$S3+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S3=$R1S3+1;
                     }
@@ -373,7 +372,7 @@ class StudentController extends Controller
                     }
                 }
                 if ($answer->answer=='D'){
-                    $S4=$S4+$weight->S4;
+                    $S4=$S4+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S4=$R1S4+1;
                     }
