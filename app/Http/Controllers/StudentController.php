@@ -132,7 +132,7 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.png'));
-        $img->text($name, 418, 180, function($font) {
+        $img->text('張耀文', 418, 180, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
@@ -184,25 +184,25 @@ class StudentController extends Controller
             }
         }
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
-        $img->text($S1, 541, 458, function($font) {
+        $img->text($S1, 542, 455, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 541, 424, function($font) {
+        $img->text($S2, 542, 421, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 576, 424, function($font) {
+        $img->text($S3, 577, 421, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 576, 458, function($font) {
+        $img->text($S4, 577, 455, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
