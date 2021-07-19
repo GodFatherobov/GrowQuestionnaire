@@ -316,7 +316,7 @@ class StudentController extends Controller
     }
     function MakeChart3($Sid){
 
-        $img = Image::make(public_path('page2.png'));
+        $img = Image::make(public_path('page3.png'));
 
         return($img->response('png'));
     }
