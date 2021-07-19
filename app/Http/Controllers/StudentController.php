@@ -108,7 +108,7 @@ class StudentController extends Controller
         });
         $Oids=other::where('studentID',$Sid)->pluck('id');
         foreach ($Oids as $Oid){
-            $answers=answer::where('Oid',$Oid)->get();
+            $answers=answer::where('otherID',$Oid)->get();
             $S1=0;$S2=0;$S3=0;$S4=0;
             foreach ($answers as $answer){
                 $weight=question::find($answer->questionID);
