@@ -107,7 +107,7 @@ class StudentController extends Controller
         ]);
     }
     function Chart($Sid){
-        $pdf = PDF::loadView('student.page2_pdf',['Sid' => $Sid]);
+        $pdf = PDF::loadView('student.output_pdf',['Sid' => $Sid]);
         $pdf->setPaper('A4');
         return $pdf->stream();
     }
@@ -130,25 +130,25 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.png'));
-        $img->text($S1, 204, 575, function($font) {
+        $img->text($S1, 209, 462, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 240, 575, function($font) {
+        $img->text($S2, 209, 428, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 276, 575, function($font) {
+        $img->text($S3, 173, 428, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 312, 575, function($font) {
+        $img->text($S4, 173, 462, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
