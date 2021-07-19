@@ -164,8 +164,7 @@ class StudentController extends Controller
         $S1=0;$S2=0;$S3=0;$S4=0;$count=0;
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
-            $count = count($answers)/12;
-            dd($answers);
+            $count = $count+1;
             foreach ($answers as $answer){
                 if($answer->answer=='A'){
                     $S1=$S1+1;
@@ -181,6 +180,7 @@ class StudentController extends Controller
                 }
             }
         }
+        dd($count);
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
         $img->text($S1, 542, 455, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
