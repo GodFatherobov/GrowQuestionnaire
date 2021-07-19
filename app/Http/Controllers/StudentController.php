@@ -75,7 +75,6 @@ class StudentController extends Controller
             }
         }
         $sum=$S1+$S2+$S3+$S4;
-
         $img = Image::make(public_path('page2.png'));
         $img->text($S1, 204, 575, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
@@ -107,6 +106,28 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
+        $Oids=other::where('studentID',$Sid);
+        foreach ($Oids as $Oid){
+            $answers=answer::where('Oid',$Oid)->get();
+            $S1=0;$S2=0;$S3=0;$S4=0;
+            foreach ($answers as $answer){
+                $weight=question::find($answer->questionID);
+                if($answer->answer=='A'){
+                    $S1=$S1+$weight->S1;
+                }
+                if ($answer->answer=='B'){
+                    $S2=$S2+$weight->S2;
+                }
+                if ($answer->answer=='C'){
+                    $S3=$S3+$weight->S3;
+                }
+                if ($answer->answer=='D'){
+                    $S4=$S4+$weight->S4;
+                }
+            }
+        }
+        $sum=$S1+$S2+$S3+$S4;
+        dd($sum);
         return($img->response('png'));
     }
     function OthersQuiz($Sid){
@@ -163,8 +184,5 @@ class StudentController extends Controller
         $pdf = PDF::loadView('student.page2_pdf',['Sid' => $Sid]);
         $pdf->setPaper('A4');
         return $pdf->stream();
-        //return view('student.chart2',[
-        //    'Sid'=>$Sid,
-        //]);
     }
 }
