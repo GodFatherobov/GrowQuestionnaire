@@ -29,6 +29,7 @@ Route::post('/StoreAnswer/{Sid}/{Qid}', [App\Http\Controllers\StudentController:
 Route::get('/Student/{Sid}', [App\Http\Controllers\StudentController::class, 'StudentShow'])->name('student.StudentShow');
 Route::get('/Student/{Sid}/MakeChart1', [App\Http\Controllers\StudentController::class, 'MakeChart1'])->name('student.MakeChart1');
 Route::get('/Student/{Sid}/MakeChart2', [App\Http\Controllers\StudentController::class, 'MakeChart2'])->name('student.MakeChart2');
+Route::get('/Student/{Sid}/MakeChart3', [App\Http\Controllers\StudentController::class, 'MakeChart3'])->name('student.MakeChart3');
 Route::get('/Student/{Sid}/chart', [App\Http\Controllers\StudentController::class, 'Chart'])->name('student.page2_pdf');
 
 

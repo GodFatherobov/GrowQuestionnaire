@@ -131,7 +131,7 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.png'));
-        $img->text($student->name, 418, 172, function($font) {
+        $img->text($student->name, 418, 170, function($font) {
             $font->file(public_path('font.ttf'));
             $font->size(14);
             $font->align('center');
@@ -312,6 +312,12 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
+        return($img->response('png'));
+    }
+    function MakeChart3($Sid){
+
+        $img = Image::make(public_path('page2.png'));
+
         return($img->response('png'));
     }
 }
