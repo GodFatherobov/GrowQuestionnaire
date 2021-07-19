@@ -107,9 +107,9 @@ class StudentController extends Controller
             $font->valign('top');
         });
         $Oids=other::where('studentID',$Sid)->pluck('id');
+        $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
-            $S1=0;$S2=0;$S3=0;$S4=0;
             foreach ($answers as $answer){
                 $weight=question::find($answer->questionID);
                 if($answer->answer=='A'){
