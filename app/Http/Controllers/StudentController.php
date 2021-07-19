@@ -437,6 +437,12 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
+        $img->text($R2S1, 426, 552, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(12);
+            $font->align('center');
+            $font->valign('top');
+        });
         return($img->response('png'));
     }
 }
