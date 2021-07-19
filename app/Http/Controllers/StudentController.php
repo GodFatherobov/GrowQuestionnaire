@@ -116,18 +116,17 @@ class StudentController extends Controller
         $answers=answer::where('studentID',$Sid)->get();
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($answers as $answer){
-            $weight=question::find($answer->questionID);
             if($answer->answer=='A'){
-                $S1=$S1+$weight->S1;
+                $S1=$S1+1;
             }
             if ($answer->answer=='B'){
-                $S2=$S2+$weight->S2;
+                $S2=$S2+1;
             }
             if ($answer->answer=='C'){
-                $S3=$S3+$weight->S3;
+                $S3=$S3+1;
             }
             if ($answer->answer=='D'){
-                $S4=$S4+$weight->S4;
+                $S4=$S4+1;
             }
         }
         $img = Image::make(public_path('page1.png'));
@@ -167,18 +166,17 @@ class StudentController extends Controller
             $count=$count+1;
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
-                $weight=question::find($answer->questionID);
                 if($answer->answer=='A'){
-                    $S1=$S1+$weight->S1;
+                    $S1=$S1+1;
                 }
                 if ($answer->answer=='B'){
-                    $S2=$S2+$weight->S2;
+                    $S2=$S2+1;
                 }
                 if ($answer->answer=='C'){
-                    $S3=$S3+$weight->S3;
+                    $S3=$S3+1;
                 }
                 if ($answer->answer=='D'){
-                    $S4=$S4+$weight->S4;
+                    $S4=$S4+1;
                 }
             }
         }
