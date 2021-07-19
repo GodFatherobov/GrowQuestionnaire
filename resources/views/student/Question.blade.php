@@ -35,5 +35,8 @@
             <button class="btn">下一頁</button>
         </div>
 </form>
+<div align="right">
+    <img src="{{ route('logo')}}" alt="加載錯誤">
+</div>
 </body>
 </html>

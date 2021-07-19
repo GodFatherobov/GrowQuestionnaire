@@ -8,7 +8,6 @@
 <h1>Other問卷填寫說明</h1>
 <form action="" enctype="multipart/form-data" method="post">
     @csrf
-    <div>
         <p>您是這位領導人的(選擇一個)：</p>
     <select name="type" id="type">
         <option value="上級主管">上級主管</option>
@@ -35,7 +34,10 @@
         <div class="row">
             <button class="btn">下一頁</button>
         </div>
+        </div>
 </form>
-
+<div align="right">
+    <img src="{{ route('logo')}}" alt="加載錯誤">
+</div>
 </body>
 </html>
