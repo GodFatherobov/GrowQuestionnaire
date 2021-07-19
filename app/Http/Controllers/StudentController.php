@@ -510,16 +510,16 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($OverLead, 135, 425, function($font) {
+        $img->text($OverLead, 130, 430, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(16);
             $font->align('center');
             $font->valign('top');
             $font->angle(90);
         });
-        $img->text($LessLead, 564, 353, function($font) {
+        $img->text($LessLead, 560, 355, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(16);
             $font->align('center');
             $font->valign('top');
             $font->angle(90);
