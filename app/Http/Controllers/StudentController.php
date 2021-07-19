@@ -77,31 +77,31 @@ class StudentController extends Controller
         $sum=$S1+$S2+$S3+$S4;
 
         $img = Image::make(public_path('page2.png'));
-        $img->text($S1, 204, 595, function($font) {
+        $img->text($S1, 204, 580, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 240, 595, function($font) {
+        $img->text($S2, 240, 580, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 276, 595, function($font) {
+        $img->text($S3, 276, 580, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 312, 595, function($font) {
+        $img->text($S4, 312, 580, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($sum, 312, 630, function($font) {
+        $img->text($sum, 312, 615, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
