@@ -388,6 +388,8 @@ class StudentController extends Controller
                 }
             }
         }
+        $OverLead=$R4S1+$R3S1+$R2S1+$R4S2+$R3S2+$R4S3;
+        $LessLead=$R3S4+$R2S4+$R1S4+$R2S3+$R1S3+$R1S2;
         $img->text($S1, 197, 552, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
@@ -507,6 +509,20 @@ class StudentController extends Controller
             $font->size(12);
             $font->align('center');
             $font->valign('top');
+        });
+        $img->text($OverLead, 135, 425, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(12);
+            $font->align('center');
+            $font->valign('top');
+            $font->angle(90);
+        });
+        $img->text($LessLead, 564, 353, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(12);
+            $font->align('center');
+            $font->valign('top');
+            $font->angle(90);
         });
         return($img->response('png'));
     }
