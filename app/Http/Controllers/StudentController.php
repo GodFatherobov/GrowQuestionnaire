@@ -101,7 +101,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($sum, 312, 625, function($font) {
+        $img->text($sum, 312, 630, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
