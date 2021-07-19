@@ -109,7 +109,6 @@ class StudentController extends Controller
         $Oids=other::where('studentID',$Sid)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;$count=0;
         foreach ($Oids as $Oid){
-            $count=$count+1;
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
                 $weight=question::find($answer->questionID);
@@ -127,33 +126,32 @@ class StudentController extends Controller
                 }
             }
         }
-        $S1=$S1/$count;$S2=$S2/$count;$S3=$S3/$count;$S4=$S4/$count;
-        $sum=($S1+$S2+$S3+$S4)/$count;
-        $img->text($S1, 435, 575, function($font) {
+        $sum=($S1+$S2+$S3+$S4);
+        $img->text($S1, 435, 570, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 470, 575, function($font) {
+        $img->text($S2, 470, 570, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 505, 575, function($font) {
+        $img->text($S3, 505, 570, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 540, 575, function($font) {
+        $img->text($S4, 540, 570, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($sum, 540, 610, function($font) {
+        $img->text($sum, 540, 605, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
