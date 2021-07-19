@@ -106,7 +106,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $Oids=other::where('studentID',$Sid);
+        $Oids=other::where('studentID',$Sid)->pluck('id');
         foreach ($Oids as $Oid){
             $answers=answer::where('Oid',$Oid)->get();
             $S1=0;$S2=0;$S3=0;$S4=0;
