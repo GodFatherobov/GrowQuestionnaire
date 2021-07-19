@@ -329,62 +329,61 @@ class StudentController extends Controller
                 $weight=question::find($answer->questionID);
                 if($answer->answer=='A'){
                     $S1=$S1+$weight->S1;
-                    dd($answer->questionID);
-                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                    if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S1=$R1S1+1;
                     }
-                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10){
+                    if($answer->questionID==14 || $answer->questionID==18 || $answer->questionID==22){
                         $R2S1=$R2S1+1;
                     }
-                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                    if($answer->questionID==15 || $answer->questionID==19 || $answer->questionID==23){
                         $R3S1=$R3S1+1;
                     }
-                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                    if($answer->questionID==16 || $answer->questionID==20 || $answer->questionID==24){
                         $R4S1=$R4S1+1;
                     }
                 }
                 if ($answer->answer=='B'){
                     $S2=$S2+$weight->S2;
-                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                    if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S2=$R1S2+1;
                     }
-                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10){
+                    if($answer->questionID==14 || $answer->questionID==18 || $answer->questionID==22){
                         $R2S2=$R2S2+1;
                     }
-                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                    if($answer->questionID==15 || $answer->questionID==19 || $answer->questionID==23){
                         $R3S2=$R3S2+1;
                     }
-                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                    if($answer->questionID==16 || $answer->questionID==20 || $answer->questionID==24){
                         $R4S2=$R4S2+1;
                     }
                 }
                 if ($answer->answer=='C'){
                     $S3=$S3+$weight->S3;
-                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                    if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S3=$R1S3+1;
                     }
-                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10) {
+                    if($answer->questionID==14 || $answer->questionID==18 || $answer->questionID==22){
                         $R2S3 = $R2S3 + 1;
                     }
-                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                    if($answer->questionID==15 || $answer->questionID==19 || $answer->questionID==23){
                         $R3S3=$R3S3+1;
                     }
-                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                    if($answer->questionID==16 || $answer->questionID==20 || $answer->questionID==24){
                         $R4S3=$R4S3+1;
                     }
                 }
                 if ($answer->answer=='D'){
                     $S4=$S4+$weight->S4;
-                    if($answer->questionID==1 || $answer->questionID==5 || $answer->questionID==9){
+                    if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S4=$R1S4+1;
                     }
-                    if($answer->questionID==2 || $answer->questionID==6 || $answer->questionID==10){
+                    if($answer->questionID==14 || $answer->questionID==18 || $answer->questionID==22){
                         $R2S4=$R2S4+1;
                     }
-                    if($answer->questionID==3 || $answer->questionID==7 || $answer->questionID==11){
+                    if($answer->questionID==15 || $answer->questionID==19 || $answer->questionID==23){
                         $R3S4=$R3S4+1;
                     }
-                    if($answer->questionID==4 || $answer->questionID==8 || $answer->questionID==12){
+                    if($answer->questionID==16 || $answer->questionID==20 || $answer->questionID==24){
                         $R4S4=$R4S4+1;
                     }
                 }
