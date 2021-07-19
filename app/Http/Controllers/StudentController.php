@@ -160,9 +160,10 @@ class StudentController extends Controller
         ]);
     }
     function Chart($Sid){
-        $id[]=$Sid;
-        return view('student.chart2',[
-            'Sid'=>$Sid,
-        ]);
+        $pdf = PDF::loadView('student.page2_pdf',['Sid' => $Sid]);
+        return $pdf->download('page2.pdf');
+        //return view('student.chart2',[
+        //    'Sid'=>$Sid,
+        //]);
     }
 }
