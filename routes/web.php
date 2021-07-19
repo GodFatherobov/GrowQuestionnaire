@@ -31,7 +31,7 @@ Route::get('/Student/{Sid}/MakeChart', [App\Http\Controllers\StudentController::
 Route::get('/Student/{Sid}/chart', [App\Http\Controllers\StudentController::class, 'Chart'])->name('student.page2_pdf');
 
 Route::get('/makechart', function () {
-    $pdf = PDF::loadView('student.page2_pdf');
+    $pdf = PDF::loadView('student.page2_pdf',['Sid' => 1]);
     return $pdf->download('page2.pdf');
 });
 
