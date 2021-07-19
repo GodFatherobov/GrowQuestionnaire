@@ -24,5 +24,6 @@
     </Form>
     </div>
 </div>
+<img src="/public/logo.png" alt="加載錯誤">
 </body>
 </html>
