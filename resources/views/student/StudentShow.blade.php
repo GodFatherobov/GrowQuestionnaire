@@ -24,7 +24,6 @@
     </Form>
     </div>
 </div>
-<img src="assets/logo.png" alt="PUSA-Icon" class="img-rounded" style="height: 300px;"/>
-
+<img src="{{ route('logo')}}" alt="加載錯誤">
 </body>
 </html>

@@ -22,6 +22,8 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/logo', [App\Http\Controllers\StudentController::class, 'logo'])->name('logo');
+
 Route::get('/{ClassLink}/Quiz', [App\Http\Controllers\StudentController::class, 'Quiz'])->name('student.StudentQuiz');
 Route::post('/{ClassLink}/Quiz', [App\Http\Controllers\StudentController::class, 'InputName'])->name('student.StudentQuiz');
 Route::get('/Quiz/{Sid}/{Qid}', [App\Http\Controllers\StudentController::class, 'ShowQuestion'])->name('student.Question');

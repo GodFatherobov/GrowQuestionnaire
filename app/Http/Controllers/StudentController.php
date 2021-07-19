@@ -526,4 +526,8 @@ class StudentController extends Controller
         });
         return($img->response('png'));
     }
+    public function logo(){
+        $img = Image::make(public_path('logo.png'));
+        return($img->response('png'));
+    }
 }
