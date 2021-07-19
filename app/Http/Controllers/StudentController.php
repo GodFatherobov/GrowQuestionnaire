@@ -56,7 +56,7 @@ class StudentController extends Controller
             'answers'=> $answers,
         ]);
     }
-    function MakeChart($Sid){
+    function MakeChart2($Sid){
         $answers=answer::where('studentID',$Sid)->get();
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($answers as $answer){
