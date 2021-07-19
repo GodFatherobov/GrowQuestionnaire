@@ -77,7 +77,7 @@ class StudentController extends Controller
         $sum=$S1+$S2+$S3+$S4;
 
         $img = Image::make(public_path('page2.png'));
-        $img->text($S1, 204, 590, function($font) {
+        $img->text($S1, 204, 595, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
