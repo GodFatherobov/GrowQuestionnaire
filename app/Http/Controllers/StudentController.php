@@ -126,6 +126,7 @@ class StudentController extends Controller
                 }
             }
         }
+        dd($count);
         $sum=($S1+$S2+$S3+$S4);
         $img->text($S1, 435, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
