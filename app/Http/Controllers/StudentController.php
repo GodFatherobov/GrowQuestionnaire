@@ -185,7 +185,7 @@ class StudentController extends Controller
         }
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
         $img->text($S1, 542, 455, function($font) {
-            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->file(public_path('font.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
