@@ -19,7 +19,7 @@
     <Form method="get" action="{{ route('student.OtherIndex',['Sid' => $student->id])}}">
         <button type="submit" class="label label-default pull-xs-right">others填寫狀況</button>
     </Form>
-    <Form method="get" action="{{ route('student.Chart',['Sid' => $student->id]) }}">
+    <Form method="get" action="{{ route('student.page2_pdf',['Sid' => $student->id]) }}">
         <button type="submit" class="label label-default pull-xs-right">產生分析表</button>
     </Form>
     </div>
