@@ -132,29 +132,29 @@ class StudentController extends Controller
         $img = Image::make(public_path('page1.jpg'));
         $img->text($student->name, 418, 169, function($font) {
             $font->file(public_path('font.ttf'));
-            $font->size(14);
+            $font->size(16);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S1, 210, 458, function($font) {
+        $img->text($S1, 210, 465, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 210, 424, function($font) {
+        $img->text($S2, 210, 431, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 173, 424, function($font) {
+        $img->text($S3, 173, 431, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 173, 458, function($font) {
+        $img->text($S4, 173, 465, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
@@ -206,7 +206,6 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->sharpen(15);
         return($img->response('jpg'));
     }
     function MakeChart2($Sid){
