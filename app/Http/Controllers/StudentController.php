@@ -205,6 +205,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
+        $img->sharpen(15);
         return($img->response('png'));
     }
     function MakeChart2($Sid){
