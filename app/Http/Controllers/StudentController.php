@@ -144,7 +144,7 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.jpg'));
-        $img->text($student->name, 418, 169, function($font) {
+        $img->text($student->name, 1339, 591, function($font) {
             $font->file(public_path('font.ttf'));
             $font->size(18);
             $font->align('center');
