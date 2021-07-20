@@ -205,7 +205,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->sharpen(15);
+        $img->sharpen(20);
         return($img->response('png'));
     }
     function MakeChart2($Sid){
@@ -311,10 +311,10 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
+        $img->sharpen(20);
         return($img->response('png'));
     }
     function MakeChart3($Sid){
-
         $img = Image::make(public_path('page3.png'));
         $Oids=other::where('studentID',$Sid)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;
@@ -523,6 +523,7 @@ class StudentController extends Controller
             $font->valign('top');
             $font->angle(90);
         });
+        $img->sharpen(20);
         return($img->response('png'));
     }
     public function logo(){
