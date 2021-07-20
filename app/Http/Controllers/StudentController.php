@@ -295,33 +295,33 @@ class StudentController extends Controller
         }
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
         $sum=round($S1+$S2+$S3+$S4);
-        $img->text($S1, 435, 567, function($font) {
+        $img->text($S1, 1375, 1795, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 470, 567, function($font) {
+        $img->text($S2, 1485, 1795, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 505, 567, function($font) {
+        $img->text($S3, 1595, 1795, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 540, 567, function($font) {
+        $img->text($S4, 1705, 1795, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($sum, 540, 602, function($font) {
+        $img->text($sum, 1705, 1905, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(36);
+            $font->size(48);
             $font->align('center');
             $font->valign('top');
         });
