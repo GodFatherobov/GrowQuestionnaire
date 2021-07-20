@@ -165,6 +165,7 @@ class StudentController extends Controller
         foreach ($Oids as $Oid){
             $count=$count+1;
             $answers=answer::where('otherID',$Oid)->get();
+            dd($answers);
             foreach ($answers as $answer){
                 if($answer->answer=='A'){
                     $S1=$S1+1;
