@@ -85,6 +85,11 @@ class StudentController extends Controller
         ]);
     }
     function StoreOtherAnswer($Sid,$Oid,$Qid){
+        if(\request('answer')==null)
+        {
+            Alert::warning('未輸入答案');
+            return back();
+        }
         answer::updateOrCreate(
             ['otherID'=>$Oid , 'questionID'=>$Qid],
             ['answer'=>request('answer')]
