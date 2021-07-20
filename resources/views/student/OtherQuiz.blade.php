@@ -39,5 +39,6 @@
 <div style="position: absolute;bottom: 10px; right: 10px;">
     <img src="{{ route('logo')}}" alt="加載錯誤">
 </div>
+@include('sweetalert::alert')
 </body>
 </html>
