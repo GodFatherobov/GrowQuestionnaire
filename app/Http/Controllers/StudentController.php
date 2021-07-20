@@ -163,7 +163,6 @@ class StudentController extends Controller
         $Oids=other::where('studentID',$Sid)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;$count=0;
         foreach ($Oids as $Oid){
-            $count=$count+1;
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
                 $count=$count+1;
