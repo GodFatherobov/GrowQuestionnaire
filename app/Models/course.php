@@ -11,5 +11,6 @@ class course extends Model
     protected $fillable=[
         'ClassName',
         'ClassLink',
+        'People',
     ];
 }
