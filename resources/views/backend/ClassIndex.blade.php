@@ -27,7 +27,7 @@
                 <input id="people"
                        type="text"
                        class="form-control @error('people') is-invalid @enderror"
-                       name="ClassName"
+                       name="people"
                        value="{{ old('people') }}"
                        required autocomplete="people" autofocus>
 
