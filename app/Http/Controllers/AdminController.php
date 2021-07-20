@@ -74,7 +74,7 @@ class AdminController extends Controller
                 $peoples+=$people;
             }
         }
-
+        dd($peoples);
 
         return view('backend.ClassShow',[
             'id'=> $id,

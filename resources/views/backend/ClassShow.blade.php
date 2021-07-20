@@ -17,9 +17,6 @@
         @foreach($students as $student)
             <tr>
                 <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.StudentShow', ['Sid' => $student->id]) }}">{{$student->name}}</a></span></td>
-                @foreach($peoples as $people)
-                <td align="center"><span style="font-size:18px;">{{$people}}</span></td>
-                @endforeach
                 <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.page2_pdf',['Sid' => $student->id]) }}">▼</a></span></td>
             </tr>
         @endforeach
