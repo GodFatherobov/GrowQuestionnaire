@@ -6,6 +6,10 @@
 <body>
 <div align="center">
 <h1>{{$student->name}}的作答情況</h1>
+    <p>邀請問卷網址</p>
+    <p>
+        <a href="http://growquestionnaire.herokuapp.com/{{$student->id}}/others">http://growquestionnaire.herokuapp.com/{{$student->id}}/others</a>
+    </p>
 <table border="1" width="250" align="center">
 
 @foreach($answers as $answer)

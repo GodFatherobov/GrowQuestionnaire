@@ -11,13 +11,13 @@
     <table border="1" width="500" align="center">
         <tr>
             <td align="center"><span style="font-size:18px;">學員姓名</span></td>
-            <td align="center"><span style="font-size:18px;">邀請問卷網址</span></td>
+            <td align="center"><span style="font-size:18px;">他評問卷數</span></td>
             <td align="center"><span style="font-size:18px;">產生問卷分析表</span></td>
         </tr>
         @foreach($students as $student)
             <tr>
                 <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.StudentShow', ['Sid' => $student->id]) }}">{{$student->name}}</a></span></td>
-                <td align="center"><span style="font-size:18px;"><a href="http://growquestionnaire.herokuapp.com/{{$student->id}}/others">http://growquestionnaire.herokuapp.com/{{$student->id}}/others</a></span></td>
+
                 <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.page2_pdf',['Sid' => $student->id]) }}">▼</a></span></td>
             </tr>
         @endforeach
