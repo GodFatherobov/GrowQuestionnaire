@@ -144,33 +144,33 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.jpg'));
-        $img->text($student->name, 1340, 550, function($font) {
+        $img->text($student->name, 1340, 545, function($font) {
             $font->file(public_path('font.ttf'));
             $font->size(72);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S1, 212, 475, function($font) {
+        $img->text($S1, 665, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S2, 665, 1400, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S3, 550, 1400, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 175, 475, function($font) {
+        $img->text($S4, 550, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(24);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
@@ -220,7 +220,6 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->sharpen(30);
         return($img->response('jpg'));
     }
     function MakeChart2($Sid){
@@ -326,7 +325,6 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->sharpen(15);
         return($img->response('jpg'));
     }
     function MakeChart3($Sid){
@@ -538,7 +536,6 @@ class StudentController extends Controller
             $font->valign('top');
             $font->angle(90);
         });
-        $img->sharpen(15);
         return($img->response('jpg'));
     }
     public function logo(){
