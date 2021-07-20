@@ -132,29 +132,29 @@ class StudentController extends Controller
         $img = Image::make(public_path('page1.jpg'));
         $img->text($student->name, 418, 169, function($font) {
             $font->file(public_path('font.ttf'));
-            $font->size(16);
+            $font->size(18);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S1, 210, 465, function($font) {
+        $img->text($S1, 210, 470, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 210, 431, function($font) {
+        $img->text($S2, 210, 436, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 173, 431, function($font) {
+        $img->text($S3, 173, 436, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 173, 465, function($font) {
+        $img->text($S4, 173, 470, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
@@ -182,30 +182,31 @@ class StudentController extends Controller
         }
         $count=floor($count/12);
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
-        $img->text($S1, 542, 455, function($font) {
+        $img->text($S1, 542, 469, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 542, 421, function($font) {
+        $img->text($S2, 542, 435, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 577, 421, function($font) {
+        $img->text($S3, 577, 435, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 577, 455, function($font) {
+        $img->text($S4, 577, 469, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
             $font->align('center');
             $font->valign('top');
         });
+        $img->sharpen(10);
         return($img->response('jpg'));
     }
     function MakeChart2($Sid){
