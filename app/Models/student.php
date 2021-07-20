@@ -11,5 +11,6 @@ class student extends Model
     protected $fillable=[
         'classID',
         'name',
+        'OthersCount',
     ];
 }
