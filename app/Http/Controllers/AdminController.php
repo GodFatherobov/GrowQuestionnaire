@@ -65,15 +65,11 @@ class AdminController extends Controller
     function ClassShow($id){
         $class=course::Find($id);
         $students=student::where('classID', '=', $id)->get();
-        foreach ($students as $student) {
-            $others = other::where('studentID', $student->id)->pluck('id');
-        }
-        dd($others);
+
         return view('backend.ClassShow',[
             'id'=> $id,
             'class'=>$class,
             'students'=>$students,
-            'peoples'=>$peoples,
         ]);
     }
     function Test(){

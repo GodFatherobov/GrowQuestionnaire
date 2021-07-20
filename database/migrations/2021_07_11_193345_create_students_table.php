@@ -17,6 +17,7 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->string('classID');
             $table->string('name');
+            $table->integer('OthersCount');
 
             $table->timestamps();
         });

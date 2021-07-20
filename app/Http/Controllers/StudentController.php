@@ -26,6 +26,7 @@ class StudentController extends Controller
         $Student=student::firstOrCreate([
             'classID'=>$Class->id,
             'name'=>$Name,
+            'OthersCount'=>0,
         ]);
         return \Redirect::route('student.Question',['Sid' => $Student->id,'Qid'=>1]);
     }
@@ -96,6 +97,8 @@ class StudentController extends Controller
         );
         $Qid++;
         if($Qid<=24){
+            $student=student::find($Sid);
+            $student->update('OthersCount',$student->OthersCount+1);
             return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
         }
         else
