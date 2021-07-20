@@ -40,7 +40,7 @@ class StudentController extends Controller
     function StoreAnswer($Sid,$Qid){
         if(\request('answer')==null)
         {
-            Alert::warning('未輸入答案');
+            Alert::warning('未選擇答案');
             return back();
         }
         answer::updateOrCreate(
@@ -87,7 +87,7 @@ class StudentController extends Controller
     function StoreOtherAnswer($Sid,$Oid,$Qid){
         if(\request('answer')==null)
         {
-            Alert::warning('未輸入答案');
+            Alert::warning('未選擇答案');
             return back();
         }
         answer::updateOrCreate(

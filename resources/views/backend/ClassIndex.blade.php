@@ -23,6 +23,19 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                 @enderror
+                <label for="people" class="col-md-4 col-form-label">課程人數：</label>
+                <input id="people"
+                       type="text"
+                       class="form-control @error('people') is-invalid @enderror"
+                       name="ClassName"
+                       value="{{ old('people') }}"
+                       required autocomplete="people" autofocus>
+
+                @error('people')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
                 <button class="btn">新增</button>
             </div>
         </form>
@@ -30,11 +43,13 @@
 <table border="1" width="600" align="center">
     <tr>
         <td align="center"><span style="font-size:18px;">課程名稱</span></td>
+        <td align="center"><span style="font-size:18px;">課程人數</span></td>
         <td align="center"><span style="font-size:18px;">問卷網址</span></td>
     </tr>
     @foreach($classes as $class)
         <tr>
             <td align="center"><span style="font-size:18px;"><a href=" {{ route('backend.ClassShow', ['id' => $class->id]) }}">{{$class->ClassName}}</a></span></td>
+            <td align="center"><span style="font-size:18px;">{{$class->People}}</span></td>
             <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}" target="_blank">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</a></span></td>
         </tr>
     @endforeach

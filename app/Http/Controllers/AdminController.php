@@ -52,6 +52,7 @@ class AdminController extends Controller
         course::create([
             'ClassName'=>request('ClassName'),
             'ClassLink'=>$ClassLink,
+            'People'=>request('people'),
         ]);
         return Redirect::to('/ClassIndex');
     }

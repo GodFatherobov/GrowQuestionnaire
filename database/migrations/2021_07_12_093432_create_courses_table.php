@@ -17,6 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('ClassName');
             $table->string('ClassLink');
+            $table->integer('People');
             $table->timestamps();
         });
     }
