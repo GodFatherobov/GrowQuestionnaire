@@ -40,7 +40,7 @@
             </div>
         </form>
 
-<table border="1" width="600" align="center">
+<table border="1" width="700" align="center">
     <tr>
         <td align="center"><span style="font-size:18px;">課程名稱</span></td>
         <td align="center"><span style="font-size:18px;">課程人數</span></td>
