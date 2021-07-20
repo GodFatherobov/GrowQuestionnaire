@@ -63,19 +63,12 @@ class AdminController extends Controller
         return Redirect::to('/ClassIndex');
     }
     function ClassShow($id){
-        $peoples=[];
         $class=course::Find($id);
         $students=student::where('classID', '=', $id)->get();
-        foreach ($students as $student){
-            $others=other::where('studentID',$student->id)->get();
-            $people=0;
-            foreach ($others as $other){
-                $people=$people+1;
-                $peoples[]+=$people;
-            }
+        foreach ($students as $student) {
+            $others = other::where('studentID', $student->id)->plurk();
         }
-        dd($peoples);
-
+        dd($others);
         return view('backend.ClassShow',[
             'id'=> $id,
             'class'=>$class,
