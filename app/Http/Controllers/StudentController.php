@@ -522,14 +522,14 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($OverLead, 410, 1295, function($font) {
+        $img->text($OverLead, 415, 1295, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
             $font->angle(90);
         });
-        $img->text($LessLead, 1785, 1775, function($font) {
+        $img->text($LessLead, 1790, 1075, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
