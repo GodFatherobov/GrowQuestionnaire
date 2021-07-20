@@ -242,33 +242,33 @@ class StudentController extends Controller
         }
         $sum=$S1+$S2+$S3+$S4;
         $img = Image::make(public_path('page2.jpg'));
-        $img->text($S1, 204, 575, function($font) {
+        $img->text($S1, 645, 1815, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S2, 240, 575, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S3, 276, 575, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S4, 312, 575, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($sum, 312, 610, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
@@ -297,31 +297,31 @@ class StudentController extends Controller
         $sum=round($S1+$S2+$S3+$S4);
         $img->text($S1, 435, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S2, 470, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S3, 505, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S4, 540, 567, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($sum, 540, 602, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
