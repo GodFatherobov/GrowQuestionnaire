@@ -97,11 +97,11 @@ class StudentController extends Controller
         );
         $Qid++;
         if($Qid<=24){
-            $student=student::find($Sid);
-            $student->update('OthersCount',$student->OthersCount+1);
             return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
         }
         else
+            $student=student::find($Sid);
+            $student->update(['OthersCount',$student->OthersCount+1]);
             return('感謝您的填寫 !');
     }
     function OtherIndex($Sid){
