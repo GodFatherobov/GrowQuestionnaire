@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use App\Models\other;
 use App\Models\student;
 use App\Models\User;
 use App\Models\question;
@@ -62,12 +63,24 @@ class AdminController extends Controller
         return Redirect::to('/ClassIndex');
     }
     function ClassShow($id){
+        $peoples=[];
         $class=course::Find($id);
         $students=student::where('classID', '=', $id)->get();
+        foreach ($students as $student){
+            $others=other::where('studentID',$student->id)->get();
+            $people=0;
+            foreach ($others as $other){
+                $people=$people+1;
+                $peoples+=$people;
+            }
+        }
+
+
         return view('backend.ClassShow',[
             'id'=> $id,
             'class'=>$class,
             'students'=>$students,
+            'peoples'=>$peoples,
         ]);
     }
     function Test(){
