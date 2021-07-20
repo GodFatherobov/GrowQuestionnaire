@@ -402,13 +402,13 @@ class StudentController extends Controller
         }
         $OverLead=$R4S1+$R3S1+$R2S1+$R4S2+$R3S2+$R4S3;
         $LessLead=$R3S4+$R2S4+$R1S4+$R2S3+$R1S3+$R1S2;
-        $img->text($S1, 630, 552, function($font) {
+        $img->text($S1, 630, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 630, 483, function($font) {
+        $img->text($S2, 630, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
@@ -426,91 +426,91 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R1S1, 503, 554, function($font) {
+        $img->text($R1S1, 1610, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R1S2, 503, 486, function($font) {
+        $img->text($R1S2, 1610, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R1S3, 503, 418, function($font) {
+        $img->text($R1S3, 1610, 1295, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R1S4, 503, 350, function($font) {
+        $img->text($R1S4, 1610, 1080, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R2S1, 426, 554, function($font) {
+        $img->text($R2S1, 1365, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R2S2, 426, 486, function($font) {
+        $img->text($R2S2, 1365, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R2S3, 426, 418, function($font) {
+        $img->text($R2S3, 1365, 1295, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R2S4, 426, 350, function($font) {
+        $img->text($R2S4, 1365, 1080, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R3S1, 349, 554, function($font) {
+        $img->text($R3S1, 1120, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R3S2, 349, 486, function($font) {
+        $img->text($R3S2, 1120, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R3S3, 349, 418, function($font) {
+        $img->text($R3S3, 1120, 1295, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R3S4, 349, 350, function($font) {
+        $img->text($R3S4, 1120, 1080, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R4S1, 272, 554, function($font) {
+        $img->text($R4S1, 875, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R4S2, 272, 486, function($font) {
+        $img->text($R4S2, 875, 1510, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($R4S3, 272, 418, function($font) {
+        $img->text($R4S3, 875, 1295, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
