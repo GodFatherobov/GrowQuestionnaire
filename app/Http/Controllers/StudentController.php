@@ -10,6 +10,7 @@ use App\Models\student;
 use PDF;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class StudentController extends Controller
 {
@@ -37,6 +38,11 @@ class StudentController extends Controller
         ]);
     }
     function StoreAnswer($Sid,$Qid){
+        if(\request('answer')==null)
+        {
+            Alert::warning('未輸入答案');
+            return back();
+        }
         answer::updateOrCreate(
             ['studentID'=>$Sid , 'questionID'=>$Qid],
             ['answer'=>request('answer')]
