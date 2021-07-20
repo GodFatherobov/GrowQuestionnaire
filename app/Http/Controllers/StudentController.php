@@ -196,25 +196,25 @@ class StudentController extends Controller
         }
         $count=floor($count/12);
         $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
-        $img->text($S1, 1825, 1500, function($font) {
+        $img->text($S1, 1825, 1490, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 1825, 1390, function($font) {
+        $img->text($S2, 1825, 1380, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 1710, 1390, function($font) {
+        $img->text($S3, 1710, 1380, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 1710, 1500, function($font) {
+        $img->text($S4, 1710, 1490, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
