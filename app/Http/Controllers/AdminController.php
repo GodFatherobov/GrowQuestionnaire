@@ -50,7 +50,7 @@ class AdminController extends Controller
     }
     function ClassCreate(){
         $ClassLink=str_random(10);
-        if (is_int(request('people'))==false){
+        if (is_numeric(request('people'))==false){
             Alert::warning('人數必須輸入數字');
             return back();
         }
