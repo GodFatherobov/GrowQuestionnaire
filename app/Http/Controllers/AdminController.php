@@ -10,6 +10,7 @@ use App\Models\weight;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
@@ -49,7 +50,10 @@ class AdminController extends Controller
     }
     function ClassCreate(){
         $ClassLink=str_random(10);
-        dd(\request('people'));
+        if (is_int(request('people'))==false){
+            Alert::warning('人數必須輸入數字');
+            return back();
+        }
         course::create([
             'ClassName'=>request('ClassName'),
             'ClassLink'=>$ClassLink,
