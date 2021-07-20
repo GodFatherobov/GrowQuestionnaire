@@ -402,6 +402,7 @@ class StudentController extends Controller
         }
         $OverLead=$R4S1+$R3S1+$R2S1+$R4S2+$R3S2+$R4S3;
         $LessLead=$R3S4+$R2S4+$R1S4+$R2S3+$R1S3+$R1S2;
+        $sum=$S1+$S2+$S3+$S4;
         $img->text($S1, 630, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
@@ -530,6 +531,13 @@ class StudentController extends Controller
             $font->angle(90);
         });
         $img->text($LessLead, 1790, 1075, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(36);
+            $font->align('center');
+            $font->valign('top');
+            $font->angle(90);
+        });
+        $img->text($sum, 355, 2175, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
