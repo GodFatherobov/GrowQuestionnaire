@@ -71,7 +71,7 @@ class AdminController extends Controller
             $people=0;
             foreach ($others as $other){
                 $people=$people+1;
-                $peoples+=$people;
+                $peoples[]+=$people;
             }
         }
         dd($peoples);
