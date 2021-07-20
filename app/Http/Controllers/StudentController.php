@@ -205,7 +205,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->sharpen(50);
+        $img->sharpen(40);
         return($img->response('png'));
     }
     function MakeChart2($Sid){
@@ -311,7 +311,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->sharpen(50);
+        $img->sharpen(40);
         return($img->response('png'));
     }
     function MakeChart3($Sid){
@@ -523,7 +523,7 @@ class StudentController extends Controller
             $font->valign('top');
             $font->angle(90);
         });
-        $img->sharpen(50);
+        $img->sharpen(40);
         return($img->response('png'));
     }
     public function logo(){
