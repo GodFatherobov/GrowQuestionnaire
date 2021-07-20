@@ -248,27 +248,27 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 240, 575, function($font) {
+        $img->text($S2, 755, 1815, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 276, 575, function($font) {
+        $img->text($S3, 865, 1815, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S4, 312, 575, function($font) {
+        $img->text($S4, 975, 1815, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($sum, 312, 610, function($font) {
+        $img->text($sum, 975, 1925, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(36);
+            $font->size(48);
             $font->align('center');
             $font->valign('top');
         });
