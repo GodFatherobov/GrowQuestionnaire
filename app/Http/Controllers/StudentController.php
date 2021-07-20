@@ -144,7 +144,7 @@ class StudentController extends Controller
             }
         }
         $img = Image::make(public_path('page1.jpg'));
-        $img->text($student->name, 1340, 565, function($font) {
+        $img->text($student->name, 1340, 550, function($font) {
             $font->file(public_path('font.ttf'));
             $font->size(72);
             $font->align('center');
@@ -152,25 +152,25 @@ class StudentController extends Controller
         });
         $img->text($S1, 212, 475, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(24);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S2, 212, 440, function($font) {
+        $img->text($S2, 665, 1400, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(24);
             $font->align('center');
             $font->valign('top');
         });
-        $img->text($S3, 175, 440, function($font) {
+        $img->text($S3, 550, 1400, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(24);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($S4, 175, 475, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
-            $font->size(12);
+            $font->size(24);
             $font->align('center');
             $font->valign('top');
         });
