@@ -404,6 +404,7 @@ class StudentController extends Controller
         $LessLead=$R3S4+$R2S4+$R1S4+$R2S3+$R1S3+$R1S2;
         $sum=$S1+$S2+$S3+$S4;
         $sum2=$R4S4+$R3S3+$R2S2+$R1S1;
+        $result=round($sum2/$sum, 2)*100;
         $img->text($S1, 630, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
@@ -545,6 +546,12 @@ class StudentController extends Controller
             $font->valign('top');
         });
         $img->text($sum2, 885, 2175, function($font) {
+            $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
+            $font->size(48);
+            $font->align('center');
+            $font->valign('top');
+        });
+        $img->text($result, 885, 2295, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(48);
             $font->align('center');
