@@ -129,7 +129,7 @@ class StudentController extends Controller
                 $S4=$S4+1;
             }
         }
-        $img = Image::make(public_path('page1.png'));
+        $img = Image::make(public_path('page1.jpg'));
         $img->text($student->name, 418, 169, function($font) {
             $font->file(public_path('font.ttf'));
             $font->size(14);
@@ -207,7 +207,7 @@ class StudentController extends Controller
             $font->valign('top');
         });
         $img->sharpen(15);
-        return($img->response('png'));
+        return($img->response('jpg'));
     }
     function MakeChart2($Sid){
         $answers=answer::where('studentID',$Sid)->get();
@@ -228,7 +228,7 @@ class StudentController extends Controller
             }
         }
         $sum=$S1+$S2+$S3+$S4;
-        $img = Image::make(public_path('page2.png'));
+        $img = Image::make(public_path('page2.jpg'));
         $img->text($S1, 204, 575, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(12);
@@ -313,10 +313,10 @@ class StudentController extends Controller
             $font->valign('top');
         });
         $img->sharpen(15);
-        return($img->response('png'));
+        return($img->response('jpg'));
     }
     function MakeChart3($Sid){
-        $img = Image::make(public_path('page3.png'));
+        $img = Image::make(public_path('page3.jpg'));
         $Oids=other::where('studentID',$Sid)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;
         $R1S1=0;$R1S2=0;$R1S3=0;$R1S4=0;
@@ -525,7 +525,7 @@ class StudentController extends Controller
             $font->angle(90);
         });
         $img->sharpen(15);
-        return($img->response('png'));
+        return($img->response('jpg'));
     }
     public function logo(){
         $img = Image::make(public_path('logo.png'));
