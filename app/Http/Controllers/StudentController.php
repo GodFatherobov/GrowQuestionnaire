@@ -127,7 +127,7 @@ class StudentController extends Controller
     }
     function MakeChart1($Sid){
         $student=student::find($Sid);
-        $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('$Sid');
+        $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('studentID');
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($Sids as $sid) {
             $answers = answer::where('studentID', $sid)->get();
