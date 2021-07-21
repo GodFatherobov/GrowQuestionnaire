@@ -134,13 +134,13 @@ class StudentController extends Controller
             if($answer->answer==$convert->convertS1){
                 $S1=$S1+1;
             }
-            if ($answer->answer==$convert->convertS1){
+            if ($answer->answer==$convert->convertS2){
                 $S2=$S2+1;
             }
-            if ($answer->answer==$convert->convertS1){
+            if ($answer->answer==$convert->convertS3){
                 $S3=$S3+1;
             }
-            if ($answer->answer==$convert->convertS1){
+            if ($answer->answer==$convert->convertS4){
                 $S4=$S4+1;
             }
         }
