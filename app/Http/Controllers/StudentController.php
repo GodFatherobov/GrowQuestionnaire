@@ -102,7 +102,7 @@ class StudentController extends Controller
         else
             $student=student::find($Sid);
             $student->update(['OthersCount'=>$student->OthersCount+1]);
-            return('感謝您的填寫 !');
+            return view('student.OtherFinishQuiz');
     }
     function OtherIndex($Sid){
         $student=student::find($Sid);
