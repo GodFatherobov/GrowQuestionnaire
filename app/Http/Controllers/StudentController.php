@@ -340,7 +340,8 @@ class StudentController extends Controller
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
-                if($answer->answer=='A'){
+                $convert=question::find($answer->questionID);
+                if($answer->answer==$convert->convertS1){
                     $S1=$S1+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S1=$R1S1+1;
@@ -355,7 +356,7 @@ class StudentController extends Controller
                         $R4S1=$R4S1+1;
                     }
                 }
-                if ($answer->answer=='B'){
+                if ($answer->answer==$convert->convertS2){
                     $S2=$S2+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S2=$R1S2+1;
@@ -370,7 +371,7 @@ class StudentController extends Controller
                         $R4S2=$R4S2+1;
                     }
                 }
-                if ($answer->answer=='C'){
+                if ($answer->answer==$convert->convertS3){
                     $S3=$S3+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S3=$R1S3+1;
@@ -385,7 +386,7 @@ class StudentController extends Controller
                         $R4S3=$R4S3+1;
                     }
                 }
-                if ($answer->answer=='D'){
+                if ($answer->answer==$convert->convertS4){
                     $S4=$S4+1;
                     if($answer->questionID==13 || $answer->questionID==17 || $answer->questionID==21){
                         $R1S4=$R1S4+1;
