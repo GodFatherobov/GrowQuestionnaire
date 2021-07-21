@@ -97,13 +97,11 @@ class StudentController extends Controller
         );
         $Qid++;
         if($Qid<=24){
-            other::update(
-                ['id'=>$Oid],
-                ['doneQuiz'=>1]
-            );
             return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
         }
         else
+            $other=other::find($Oid);
+            $other->update(['doneQuiz'=>1]);
             $student=student::find($Sid);
             $student->update(['OthersCount'=>$student->OthersCount+1]);
             return view('student.OtherFinishQuiz');
