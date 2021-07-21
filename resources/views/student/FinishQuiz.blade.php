@@ -20,7 +20,7 @@
         的使用狀況，以及作為接下來領導力精進的參考依據。這份問卷共有 12道題，大<br>
         約會花您 8分鐘時間完成問卷，也非常感謝您的投入來幫助我變得更好 !<br>
     </h2>
-<h2><a href="http://growquestionnaire.herokuapp.com/{{$Sid}}/others">http://growquestionnaire.herokuapp.com/{{$Sid}}/others</a></h2>
+<h2><a href="https://jctraining.herokuapp.com/{{$Sid}}/others">https://jctraining.herokuapp.com/{{$Sid}}/others</a></h2>
 <div style="position: absolute;bottom: 10px; right: 10px;">
     <img src="{{ route('logo')}}" alt="加載錯誤">
 </div>

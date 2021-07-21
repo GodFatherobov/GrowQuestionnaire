@@ -6,7 +6,7 @@
 <body>
 <div align="center">
 <h1>課程名稱：{{$class->ClassName}}</h1>
-    <p>課程問卷連結：<a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</a></p>
+    <p>課程問卷連結：<a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}">https://jctraining.herokuapp.com/{{$class->ClassLink}}/Quiz</a></p>
     <table border="1" width="500" align="center">
         <td align="center"><div style="color: blue">學員自評問卷統計</div></td>
         <td align="center"><div style="color: #38c172">已完成份數</div></td>

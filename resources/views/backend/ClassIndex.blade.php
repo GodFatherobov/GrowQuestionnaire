@@ -50,7 +50,7 @@
         <tr>
             <td align="center"><span style="font-size:18px;"><a href=" {{ route('backend.ClassShow', ['id' => $class->id]) }}">{{$class->ClassName}}</a></span></td>
             <td align="center"><span style="font-size:18px;">{{$class->People}}</span></td>
-            <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}" target="_blank">http://growquestionnaire.herokuapp.com/{{$class->ClassLink}}/Quiz</a></span></td>
+            <td align="center"><span style="font-size:18px;"><a href=" {{ route('student.StudentQuiz', ['ClassLink' => $class->ClassLink]) }}" target="_blank">https://jctraining.herokuapp.com/{{$class->ClassLink}}/Quiz</a></span></td>
         </tr>
     @endforeach
 </table>
