@@ -128,11 +128,9 @@ class StudentController extends Controller
         return $pdf->stream();
     }
     function MakeChart1($Sid){
-        $student=student::find($Sid);
-        $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('studentID');
+        $sid=answer::where('studentID',$Sid)->where('questionID',12)->pluck('studentID');
         $S1=0;$S2=0;$S3=0;$S4=0;
-        foreach ($Sids as $sid) {
-            $answers = answer::where('studentID', $sid)->get();
+            $answers = answer::where('studentID', $sid->studentID)->get();
             foreach ($answers as $answer) {
                 $convert = question::find($answer->questionID);
                 if ($answer->answer == $convert->convertS1) {
@@ -148,7 +146,6 @@ class StudentController extends Controller
                     $S4 = $S4 + 1;
                 }
             }
-        }
         $img = Image::make(public_path('page1.jpg'));
         $img->text($student->name, 1340, 540, function($font) {
             $font->file(public_path('font.ttf'));
@@ -232,21 +229,27 @@ class StudentController extends Controller
         return($img->response('jpg'));
     }
     function MakeChart2($Sid){
-        $answers=answer::where('studentID',$Sid)->get();
-        $S1=0;$S2=0;$S3=0;$S4=0;
-        foreach ($answers as $answer){
-            $weight=question::find($answer->questionID);
-            if($answer->answer=='A'){
-                $S1=$S1+$weight->S1;
-            }
-            if ($answer->answer=='B'){
-                $S2=$S2+$weight->S2;
-            }
-            if ($answer->answer=='C'){
-                $S3=$S3+$weight->S3;
-            }
-            if ($answer->answer=='D'){
-                $S4=$S4+$weight->S4;
+        $S1 = 0;
+        $S2 = 0;
+        $S3 = 0;
+        $S4 = 0;
+        $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('studentID');
+        foreach ($Sids as $sid) {
+            $answers = answer::where('studentID', $sid)->get();
+            foreach ($answers as $answer) {
+                $weight = question::find($answer->questionID);
+                if ($answer->answer == 'A') {
+                    $S1 = $S1 + $weight->S1;
+                }
+                if ($answer->answer == 'B') {
+                    $S2 = $S2 + $weight->S2;
+                }
+                if ($answer->answer == 'C') {
+                    $S3 = $S3 + $weight->S3;
+                }
+                if ($answer->answer == 'D') {
+                    $S4 = $S4 + $weight->S4;
+                }
             }
         }
         $sum=$S1+$S2+$S3+$S4;
@@ -281,7 +284,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $Oids=other::where('studentID',$Sid)->pluck('id');
+        $Oids=other::where('studentID',$Sid)->where('doneQuiz',1)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;$count=0;
         foreach ($Oids as $Oid){
             $count=$count+1;
