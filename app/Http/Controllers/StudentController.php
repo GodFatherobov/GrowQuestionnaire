@@ -355,6 +355,7 @@ class StudentController extends Controller
         $R2S1=0;$R2S2=0;$R2S3=0;$R2S4=0;
         $R3S1=0;$R3S2=0;$R3S3=0;$R3S4=0;
         $R4S1=0;$R4S2=0;$R4S3=0;$R4S4=0;
+        $result=0;
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
             foreach ($answers as $answer){
@@ -427,9 +428,10 @@ class StudentController extends Controller
         $sum2=$R4S4+$R3S3+$R2S2+$R1S1;
         if($sum != 0){
             $result=round($sum2/$sum, 2)*100;
-            $result = (string)$result;
-            $result= $result . "%";
+
         }
+        $result = (string)$result;
+        $result= $result . "%";
         $img->text($S1, 630, 1725, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
