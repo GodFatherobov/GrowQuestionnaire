@@ -76,6 +76,7 @@ class AdminController extends Controller
             'count'=>$count,
         ]);
     }
+    /*
     function Test(){
         //init AdminUser
         User::create(['name'=>'lanschen','password'=>'coffeec2',]);
@@ -469,4 +470,5 @@ class AdminController extends Controller
 
         return('init complete');
     }
+    */
 }
