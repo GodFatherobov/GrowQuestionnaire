@@ -349,7 +349,7 @@ class StudentController extends Controller
     }
     function MakeChart3($Sid){
         $img = Image::make(public_path('page3.jpg'));
-        $Oids=other::where('studentID',$Sid)->pluck('id');
+        $Oids=other::where('studentID',$Sid)->where('doneQuiz',1)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;
         $R1S1=0;$R1S2=0;$R1S3=0;$R1S4=0;
         $R2S1=0;$R2S2=0;$R2S3=0;$R2S4=0;
