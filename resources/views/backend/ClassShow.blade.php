@@ -10,7 +10,9 @@
     <table border="1" width="500" align="center">
         <td><div style="color: blue">學員自評問卷統計</div></td>
         <td><div style="color: #38c172">已完成份數</div></td>
+        <td>{{$count}}</td>
         <td><div style="color: red">未完成份數</div></td>
+        <td>{{$class->People-$count}}</td>
     </table>
     <table border="1" width="500" align="center">
         <tr>
