@@ -131,7 +131,7 @@ class StudentController extends Controller
         $questions=[];
         for ($i=1;$i<=12;$i++)
         {
-            $questions+=question::find($i);
+            $questions[$i]=question::find($i);
         }
         dd($questions);
         $S1=0;$S2=0;$S3=0;$S4=0;
