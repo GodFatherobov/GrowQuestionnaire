@@ -200,7 +200,9 @@ class StudentController extends Controller
             }
         }
         $count=floor($count/12);
-        $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
+        if($count != 0){
+            $S1=round($S1/$count);$S2=round($S2/$count);$S3=round($S3/$count);$S4=round($S4/$count);
+        }
         $img->text($S1, 1825, 1490, function($font) {
             $font->file(public_path('OpenSans-SemiboldItalic.ttf'));
             $font->size(36);
