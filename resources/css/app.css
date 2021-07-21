@@ -1,10 +1,9 @@
-.Row {
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
+.parent {
+    display: flex;
+    flex-direction:row;
 }
-.Column {
-    display: table-cell;
-    background-color: red; /*Optional*/
+
+.column {
+    flex: 1 1 0px;
+    border: 1px solid black;
 }
