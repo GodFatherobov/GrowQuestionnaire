@@ -127,21 +127,24 @@ class StudentController extends Controller
     }
     function MakeChart1($Sid){
         $student=student::find($Sid);
-        $answers=answer::where('studentID',$Sid)->get();
+        $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('$Sid');
         $S1=0;$S2=0;$S3=0;$S4=0;
-        foreach ($answers as $answer){
-            $convert=question::find($answer->questionID);
-            if($answer->answer==$convert->convertS1){
-                $S1=$S1+1;
-            }
-            if ($answer->answer==$convert->convertS2){
-                $S2=$S2+1;
-            }
-            if ($answer->answer==$convert->convertS3){
-                $S3=$S3+1;
-            }
-            if ($answer->answer==$convert->convertS4){
-                $S4=$S4+1;
+        foreach ($Sids as $sid) {
+            $answers = answer::where('studentID', $Sid)->get();
+            foreach ($answers as $answer) {
+                $convert = question::find($answer->questionID);
+                if ($answer->answer == $convert->convertS1) {
+                    $S1 = $S1 + 1;
+                }
+                if ($answer->answer == $convert->convertS2) {
+                    $S2 = $S2 + 1;
+                }
+                if ($answer->answer == $convert->convertS3) {
+                    $S3 = $S3 + 1;
+                }
+                if ($answer->answer == $convert->convertS4) {
+                    $S4 = $S4 + 1;
+                }
             }
         }
         $img = Image::make(public_path('page1.jpg'));
