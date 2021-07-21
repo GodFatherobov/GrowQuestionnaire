@@ -17,6 +17,7 @@ class CreateOthersTable extends Migration
             $table->id();
             $table->integer('studentID');
             $table->string('type');
+            $table->integer('doneQuiz')->nullable();
             $table->timestamps();
         });
     }

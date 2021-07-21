@@ -11,5 +11,6 @@ class other extends Model
     protected $fillable=[
         'studentID',
         'type',
+        'doneQuiz',
     ];
 }

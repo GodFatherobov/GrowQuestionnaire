@@ -97,6 +97,10 @@ class StudentController extends Controller
         );
         $Qid++;
         if($Qid<=24){
+            other::update(
+                ['id'=>$Oid],
+                ['doneQuiz'=>1]
+            );
             return \Redirect::route('student.OthersQuestion',['Sid' => $Sid,'Oid'=>$Oid,'Qid'=>$Qid]);
         }
         else
@@ -178,7 +182,7 @@ class StudentController extends Controller
             $font->align('center');
             $font->valign('top');
         });
-        $Oids=other::where('studentID',$Sid)->pluck('id');
+        $Oids=other::where('studentID',$Sid)->where('doneQuiz',1)->pluck('id');
         $S1=0;$S2=0;$S3=0;$S4=0;$count=0;
         foreach ($Oids as $Oid){
             $answers=answer::where('otherID',$Oid)->get();
