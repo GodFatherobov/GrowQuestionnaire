@@ -18,5 +18,9 @@ class question extends Model
         'S2',
         'S3',
         'S4',
+        'convertS1',
+        'convertS2',
+        'convertS3',
+        'convertS4',
     ];
 }

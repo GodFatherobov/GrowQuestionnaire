@@ -88,6 +88,10 @@ class AdminController extends Controller
             'S2'=>1,
             'S3'=>2,
             'S4'=>0,
+            'convertS1'=>'A',
+            'convertS2'=>'C',
+            'convertS3'=>'B',
+            'convertS4'=>'D',
             ]);
 
         //Q2
@@ -101,6 +105,10 @@ class AdminController extends Controller
             'S2'=>0,
             'S3'=>2,
             'S4'=>1,
+            'convertS1'=>'D',
+            'convertS2'=>'A',
+            'convertS3'=>'C',
+            'convertS4'=>'B',
         ]);
         //Q3
         question::create([
@@ -113,6 +121,10 @@ class AdminController extends Controller
             'S2'=>1,
             'S3'=>0,
             'S4'=>3,
+            'convertS1'=>'C',
+            'convertS2'=>'A',
+            'convertS3'=>'D',
+            'convertS4'=>'B',
         ]);
         //Q4
         question::create([
@@ -125,6 +137,10 @@ class AdminController extends Controller
             'S2'=>0,
             'S3'=>3,
             'S4'=>1,
+            'convertS1'=>'B',
+            'convertS2'=>'D',
+            'convertS3'=>'A',
+            'convertS4'=>'C',
         ]);
         //Q5
         question::create([
@@ -137,6 +153,10 @@ class AdminController extends Controller
             'S2'=>2,
             'S3'=>3,
             'S4'=>1,
+            'convertS1'=>'C',
+            'convertS2'=>'B',
+            'convertS3'=>'D',
+            'convertS4'=>'A',
         ]);
         //Q6
         question::create([
@@ -149,6 +169,10 @@ class AdminController extends Controller
             'S2'=>2,
             'S3'=>0,
             'S4'=>3,
+            'convertS1'=>'B',
+            'convertS2'=>'D',
+            'convertS3'=>'A',
+            'convertS4'=>'C',
         ]);
         //Q7
         question::create([
@@ -161,6 +185,10 @@ class AdminController extends Controller
             'S2'=>3,
             'S3'=>1,
             'S4'=>2,
+            'convertS1'=>'A',
+            'convertS2'=>'C',
+            'convertS3'=>'B',
+            'convertS4'=>'D',
         ]);
         //Q8
         question::create([
@@ -173,6 +201,10 @@ class AdminController extends Controller
             'S2'=>1,
             'S3'=>0,
             'S4'=>2,
+            'convertS1'=>'C',
+            'convertS2'=>'B',
+            'convertS3'=>'D',
+            'convertS4'=>'A',
         ]);
         //Q9
         question::create([
@@ -185,6 +217,10 @@ class AdminController extends Controller
             'S2'=>2,
             'S3'=>3,
             'S4'=>1,
+            'convertS1'=>'C',
+            'convertS2'=>'B',
+            'convertS3'=>'D',
+            'convertS4'=>'A',
         ]);
         //Q10
         question::create([
@@ -197,6 +233,10 @@ class AdminController extends Controller
             'S2'=>0,
             'S3'=>1,
             'S4'=>3,
+            'convertS1'=>'B',
+            'convertS2'=>'D',
+            'convertS3'=>'A',
+            'convertS4'=>'C',
         ]);
         //Q11
         question::create([
@@ -209,6 +249,10 @@ class AdminController extends Controller
             'S2'=>3,
             'S3'=>1,
             'S4'=>2,
+            'convertS1'=>'A',
+            'convertS2'=>'C',
+            'convertS3'=>'B',
+            'convertS4'=>'D',
         ]);
         //Q12
         question::create([
@@ -221,6 +265,10 @@ class AdminController extends Controller
             'S2'=>3,
             'S3'=>0,
             'S4'=>2,
+            'convertS1'=>'C',
+            'convertS2'=>'A',
+            'convertS3'=>'D',
+            'convertS4'=>'B',
         ]);
         //OthersQ1
         question::create([

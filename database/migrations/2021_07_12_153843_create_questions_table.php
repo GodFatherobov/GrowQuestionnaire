@@ -24,6 +24,10 @@ class CreateQuestionsTable extends Migration
             $table->integer('S2');
             $table->integer('S3');
             $table->integer('S4');
+            $table->string('convertS1')->nullable();
+            $table->string('convertS2')->nullable();
+            $table->string('convertS3')->nullable();
+            $table->string('convertS4')->nullable();
             $table->timestamps();
         });
     }

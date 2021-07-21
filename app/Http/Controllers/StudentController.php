@@ -128,6 +128,12 @@ class StudentController extends Controller
     function MakeChart1($Sid){
         $student=student::find($Sid);
         $answers=answer::where('studentID',$Sid)->get();
+        $questions=[];
+        for ($i=1;$i<=12;$i++)
+        {
+            $questions+=question::find($i);
+        }
+        dd($questions);
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($answers as $answer){
             if($answer->answer=='A'){
