@@ -130,7 +130,7 @@ class StudentController extends Controller
         $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('$Sid');
         $S1=0;$S2=0;$S3=0;$S4=0;
         foreach ($Sids as $sid) {
-            $answers = answer::where('studentID', $Sid)->get();
+            $answers = answer::where('studentID', $sid)->get();
             foreach ($answers as $answer) {
                 $convert = question::find($answer->questionID);
                 if ($answer->answer == $convert->convertS1) {
