@@ -128,9 +128,11 @@ class StudentController extends Controller
         return $pdf->stream();
     }
     function MakeChart1($Sid){
-        $sid=answer::where('studentID',$Sid)->where('questionID',12)->pluck('studentID');
+        $student=student::find($Sid);
+        $Sids=answer::where('studentID',$Sid)->where('questionID',12)->pluck('studentID');
         $S1=0;$S2=0;$S3=0;$S4=0;
-            $answers = answer::where('studentID', $sid->studentID)->get();
+        foreach ($Sids as $sid) {
+            $answers = answer::where('studentID', $sid)->get();
             foreach ($answers as $answer) {
                 $convert = question::find($answer->questionID);
                 if ($answer->answer == $convert->convertS1) {
@@ -146,6 +148,7 @@ class StudentController extends Controller
                     $S4 = $S4 + 1;
                 }
             }
+        }
         $img = Image::make(public_path('page1.jpg'));
         $img->text($student->name, 1340, 540, function($font) {
             $font->file(public_path('font.ttf'));
