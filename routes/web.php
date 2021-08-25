@@ -50,4 +50,4 @@ Route::get('/Class/{id}', [App\Http\Controllers\AdminController::class, 'ClassSh
 
 
 
-//Route::get('/test', [App\Http\Controllers\AdminController::class, 'test'])->name('test');
+Route::get('/test', [App\Http\Controllers\AdminController::class, 'test'])->name('test');

@@ -76,7 +76,7 @@ class AdminController extends Controller
             'count'=>$count,
         ]);
     }
-    /*
+
     function Test(){
         //init AdminUser
         User::create(['name'=>'lanschen','password'=>'coffeec2',]);
@@ -84,7 +84,7 @@ class AdminController extends Controller
 
         //Q1
         question::create([
-            'Question'=>'一名團隊成員對該領導者最近友善的談話毫無回應，反而在擔心自己的福利。她似乎很沮喪，而且沒有按時完成工作。',
+            'Question'=>'一名團隊成員對你最近友善的談話毫無回應，反而在擔心自己的福利。她似乎很沮喪，而且沒有按時完成工作。',
             'Option1'=>'幫助她逐步地學習完成工作的方法，並讓她知道沒有按時完成工作的後果。',
             'Option2'=>'詢問她打算如何重回正軌，並鼓勵她付諸實踐。',
             'Option3'=>'與她一起討論問題並設定目標。',
@@ -470,5 +470,5 @@ class AdminController extends Controller
 
         return('init complete');
     }
-    */
+
 }
