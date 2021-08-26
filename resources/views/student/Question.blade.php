@@ -17,7 +17,7 @@
 @elseif($question->id == 4)
     <h3>A team member has proposed a change that she wants to implement. She is enthusiastic and has a fine<br> record of accomplishment in this area. You view her suggestion as extremely valuable. </h3>
 @elseif($question->id == 5)
-    <h3>A team member's performance has been dropping during the last few months. She has been unconcerned<br> with meeting objectives. She continually needs coaching in ensure her tasks are done on time. </h3>
+    <h3>A team member's performance has been dropping during the last few months. She has been unconcerned<br> with meeting objectives. She continually needs coaching on ensure her tasks are done on time. </h3>
 @elseif($question->id == 6)
     <h3>Based on feedback from a previous supervisor, you have been closely supervising and directing a team<br> member on a critical task. She is responding favorably and you would now like to help her become more<br> efficient. </h3>
 @elseif($question->id == 7)
