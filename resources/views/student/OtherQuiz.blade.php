@@ -40,10 +40,10 @@
                 • Select an action for each of the 12 situations. Do not skip any<br>
                 • Move through the items quickly and stick with the first choice you make on each item. Your first choice tends to be the most accurate one<br>
             </p>
-    <p style="color:red">重要事項：檢查你的選擇是否為該領導者可能做出的反應， 而非他應該做出的反應。這樣做的目的在於評估他<br>
+            <p style="color:red"><span style="font-weight: bold;font-size: 20px">重要事項：</span>檢查你的選擇是否為該領導者<span style="font-weight: bold;font-size: 20px">可能做出</span>的反應， 而非他<span style="font-weight: bold;font-size: 20px">應該做出</span>的反應。這樣做的目的在於評估他<br>
         實際做出的行為， 而非獲得正確答案。 如果沒有此人可能會採取的行為選項，請選擇你認為最貼近此人反應的<br>
         選項。</p>
-            <p style="color:red">Important: Check what you think this person would do and not what they should do. The goal is to evaluate. what behaviors they actually use- not to get<br>
+            <p style="color:red"><span style="font-weight: bold;font-size: 20px">Important:</span> Check what you think this person <span style="font-weight: bold;font-size: 20px">would</span> do and not what they <span style="font-weight: bold;font-size: 20px">should</span> do. The goal is to evaluate. what behaviors they actually use- not to get<br>
                 right answers. If there is no alternative action that describes what this person would do in the situation, select the response that most closely resembles<br>
                 what you think they would do. </p>
         <div class="row">

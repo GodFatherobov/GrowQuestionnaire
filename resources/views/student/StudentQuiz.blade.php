@@ -44,9 +44,9 @@
         ．Select the alternative action you think most closely describes what behavior you would use in the situation presented<br>
         ．Select an action for each of the 12 situations. Do not skip any<br>
         ．Move through the items quickly and stick with the first choice you make on each item. Your first choice tends to be the most accurate one. </p>
-    <p style="color:red">重要事項：檢查你的選擇是否為你可能做出的反應， 而非你應該做出的反應；這樣做的目的在於評估你實際會<br>
+    <p style="color:red"><span style="font-weight: bold;font-size: 20px">重要事項：</span>檢查你的選擇是否為你<span style="font-weight: bold;font-size: 20px">可能做出</span>的反應， 而非你<span style="font-weight: bold;font-size: 20px">應該做出</span>的反應；這樣做的目的在於評估你實際會<br>
         使用的行為， 而非獲得正確答案。如果沒有你可能會採取的行為選項，請選擇你認為最貼近你可能會做的選項。</p>
-    <p style="color:red">Important: Check what you think you would do and not what you should do. The goal is to evaluate. what behaviors you actually use- not to get right answers.<br>
+    <p style="color:red"><span style="font-weight: bold;font-size: 20px">Important:</span> Check what you think you <span style="font-weight: bold;font-size: 20px">would</span> do and not what you <span style="font-weight: bold;font-size: 20px">should</span> do. The goal is to evaluate. what behaviors you actually use- not to get right answers.<br>
         If there is no alternative action that describes what you would do in the situation, select the response that most closely resembles what you would do. </p>
         <div class="row">
             <button class="btn" style="width: 150px;height: 50px;font-size: 16px">下一頁(next page)</button>
