@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\answer;
 use App\Models\course;
 use App\Models\other;
 use App\Models\student;
@@ -75,6 +76,16 @@ class AdminController extends Controller
             'students'=>$students,
             'count'=>$count,
         ]);
+    }
+    function Test(){
+        course::find(1)->delete();
+        course::find(2)->delete();
+        course::find(3)->delete();
+        student::where('classID',1)->delete();
+        student::where('classID',2)->delete();
+        student::where('classID',3)->delete();
+        answer::where('id','<','1000')->delete();
+        return('complete');
     }
     /*
     function Test(){
