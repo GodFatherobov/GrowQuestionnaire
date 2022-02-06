@@ -78,13 +78,7 @@ class AdminController extends Controller
         ]);
     }
     function Test(){
-        course::find(1)->delete();
-        course::find(2)->delete();
-        course::find(3)->delete();
-        student::where('classID',1)->delete();
-        student::where('classID',2)->delete();
-        student::where('classID',3)->delete();
-        answer::where('id','<','1000')->delete();
+        answer::where('id','<','2000')->delete();
         return('complete');
     }
     /*
