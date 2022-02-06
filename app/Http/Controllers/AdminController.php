@@ -78,7 +78,7 @@ class AdminController extends Controller
         ]);
     }
     function Test(){
-        answer::where('id','<','2000')->delete();
+        answer::where('id','<','3000')->delete();
         return('complete');
     }
     /*
