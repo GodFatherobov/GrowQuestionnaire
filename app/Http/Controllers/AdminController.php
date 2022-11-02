@@ -83,8 +83,6 @@ class AdminController extends Controller
     }
     /*
     function Test(){
-        //init AdminUser
-        User::create(['name'=>'lanschen','password'=>'coffeec2',]);
         //import Question
 
         //Q1
