@@ -3,7 +3,7 @@ FROM php:8.2-fpm
 # 安裝系統依賴
 RUN apt-get update && apt-get install -y \
     git curl libpng-dev libonig-dev libxml2-dev zip unzip \
-    libzip-dev nodejs npm nginx
+    libzip-dev nodejs npm nginx libpq-dev
 
 # 安裝 PHP 擴充套件
 RUN docker-php-ext-install pdo_mysql pdo_pgsql pgsql mbstring exif pcntl bcmath gd zip
