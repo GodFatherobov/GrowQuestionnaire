@@ -258,11 +258,6 @@
             }
         });
     }
-</script>
-@endsection
-
-@section('scripts')
-<script>
     function copyUrl(url, btn) {
         navigator.clipboard.writeText(url).then(function () {
             var orig = btn.textContent;
