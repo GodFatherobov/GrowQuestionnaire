@@ -9,9 +9,8 @@ class QuestionSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('questions')->truncate();
-
-        DB::table('questions')->insert([
+        // upsert: 以 id 為衝突鍵，存在則更新題目欄位，不存在則新增
+        DB::table('questions')->upsert([
             // ── 自評題 1–12 ──────────────────────────────────────────────
             [
                 'id' => 1,
@@ -278,6 +277,13 @@ class QuestionSeeder extends Seeder
                 'convertS1' => 'C', 'convertS2' => 'A', 'convertS3' => 'D', 'convertS4' => 'B',
                 'created_at' => '2021-08-25 21:58:10', 'updated_at' => '2021-08-25 21:58:10',
             ],
+        ],
+        ['id'],
+        [
+            'Question', 'Option1', 'Option2', 'Option3', 'Option4',
+            'S1', 'S2', 'S3', 'S4',
+            'convertS1', 'convertS2', 'convertS3', 'convertS4',
+            'updated_at',
         ]);
     }
 }
