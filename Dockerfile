@@ -19,7 +19,7 @@ COPY . .
 
 # 安裝依賴
 RUN composer install --no-dev --optimize-autoloader
-RUN npm install && npm run build
+RUN npm install && npm run prod
 
 # 設定權限
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
