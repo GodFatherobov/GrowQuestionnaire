@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev nodejs npm nginx
 
 # 安裝 PHP 擴充套件
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-install pdo_mysql pdo_pgsql pgsql mbstring exif pcntl bcmath gd zip
 
 # 安裝 Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
