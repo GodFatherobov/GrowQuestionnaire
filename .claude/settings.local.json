@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem *)",
+      "PowerShell(& \"C:\\\\laragon\\\\bin\\\\php\\\\php-8.3.30-Win32-vs16-x64\\\\php.exe\" -r \"echo 'max_execution_time=' . ini_get\\('max_execution_time'\\) . PHP_EOL; echo 'memory_limit=' . ini_get\\('memory_limit'\\) . PHP_EOL; echo 'max_input_time=' . ini_get\\('max_input_time'\\) . PHP_EOL;\")",
+      "Bash(php artisan *)",
+      "Bash(findstr demo *)"
+    ]
+  }
+}
