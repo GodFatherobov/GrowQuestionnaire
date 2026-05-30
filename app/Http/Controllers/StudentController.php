@@ -358,6 +358,7 @@ class StudentController extends Controller
 
     function Chart($Sid)
     {
+        try {
         $img1 = $this->_buildChart1($Sid);
         $img2 = $this->_buildChart2($Sid);
         $img3 = $this->_buildChart3($Sid);
@@ -369,6 +370,13 @@ class StudentController extends Controller
         ]);
         $pdf->setPaper('A4');
         return $pdf->stream();
+        } catch (\Throwable $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+                'file'  => $e->getFile(),
+                'line'  => $e->getLine(),
+            ], 500);
+        }
     }
 
     function MakeChart1($Sid)
