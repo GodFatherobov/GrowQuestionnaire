@@ -13,6 +13,9 @@ RUN docker-php-ext-install gd
 # 安裝其他 PHP 擴充套件
 RUN docker-php-ext-install pdo_mysql pdo_pgsql pgsql mbstring exif pcntl bcmath zip
 
+# PHP 執行環境設定
+RUN echo "memory_limit=512M\nmax_execution_time=120\npost_max_size=64M\nupload_max_filesize=64M" > /usr/local/etc/php/conf.d/custom.ini
+
 # 安裝 Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
